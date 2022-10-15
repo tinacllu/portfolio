@@ -1,0 +1,49 @@
+@use "./shared/variables" as *;
+@use "./shared/typography";
+
+.about {
+    background-color: tomato;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .sectionHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 20%;
+        h2 {
+            writing-mode: sideways-lr;
+        }
+        .lineContainer {
+            background-color: pink;
+            width: 50%;
+            height: 50%;
+        }
+        
+    }
+    .sectionContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        .aboutMe {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .imgContainer {
+                width: 30%;
+            }
+            .textContainer {
+                width: 70%;
+                margin: 30px;
+            }
+        }
+
+        .techStack {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use "./variables" as *;
+@use "./typography";
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 90%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    // max-height: 100%;
+    object-fit: cover;
+    
+}
+
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+}
+
+.halfCircle {
+    // width: 200px;
+    // height: 100px; /*half the width*/
+    // background-color: pink;
+    // border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+    // border-top-right-radius: 110px; /* 100px of height + 10px of border */
+    // border: 10px solid gray;
+    // border-bottom: 0;
+    width: 250px;
+    height: 250px;
+    border: 50px solid black;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0 300px 0 0;
+}
+
+.accentLine {
+    border-top: 5px solid black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+input, textarea {
+    all: unset;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}

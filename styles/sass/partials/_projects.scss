@@ -1,0 +1,33 @@
+@use "./shared/variables" as *;
+@use "./shared/typography";
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    .sectionHeader {
+        display: flex;
+        flex-direction: column;
+        .accentLine {
+            width: 100px;
+        }
+    }
+    .sectionContent {
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        .arrowContainer {
+            margin: 25px;
+        }
+        .projectContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            li {
+                margin: 20px;
+            }
+        }
+    }
+}

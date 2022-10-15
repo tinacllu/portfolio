@@ -1,0 +1,54 @@
+@use "./shared/variables" as *;
+@use "./shared/typography";
+
+.contact {
+    display: flex;
+    .sectionContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60vw;
+        margin: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        .personalInfo {
+            display: flex; 
+            width: calc(100% - 20px);
+            justify-content: space-between;
+            li {
+                width: 45%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+        .messageContainer {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 20px);
+            justify-self: space-between;
+            input, textarea {
+                width: 100%;
+            }
+        }
+    }
+
+    .end {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        .accentLine, p {
+            width: 30%;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}

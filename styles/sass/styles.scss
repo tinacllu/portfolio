@@ -1,0 +1,11 @@
+@use "./partials/shared/setup";
+@use "./partials/shared/variables" as *;
+@use "./partials/shared/typography";
+@use "./partials/shared/baseStyles";
+@use "./partials/shared/mixins";
+
+@use "./partials/home";
+@use "./partials/about";
+@use "./partials/projects";
+@use "./partials/contact";
+
