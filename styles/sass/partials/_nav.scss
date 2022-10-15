@@ -9,13 +9,15 @@ header {
     position: sticky;
     top: 0px;
 }
+
 .leftPanel {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px;
+    margin: 20px 20px 0;
     width: 5%;
     .logo {
+        align-self: center;
         background-color: $brightOrange;
         border-radius: 50%;
         width: 30px;
@@ -26,18 +28,18 @@ header {
     .socialMediaContainer {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         height: 30vh;
         .listItem {
             margin: 10px 0;
             display: flex;
-            justify-content: center;
         }
         .navLine {
             height: 19vh;
             width: 3px;
             background-color: black;
         }
-
     }
 }
 
@@ -48,4 +50,18 @@ header {
     align-items: flex-end;
     margin: 20px;
     width: 5%;
+    .navIcons {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .toTop {
+        margin-bottom: 20px;
+        i {
+            color: $brightOrange;
+            opacity: 50%;
+        }
+    }
 }

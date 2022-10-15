@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header hidden>
         <div class="leftPanel">
             <div class="logo">tl</div>
             <ul class="socialMediaContainer">
@@ -29,50 +29,71 @@
             </ul> <!--socialMediaContainer-->
         </div>
         <nav class="rightPanel">
-            <ul>
+            <ul class="navIcons">
                 <li>
-                    <i class="fa-solid fa-house-chimney"></i>
-                    <p hidden>Home</p>
+                    <a href="#home">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <p hidden>Home</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-user"></i>
-                    <p hidden>About</p>
+                    <a href="#about">
+                        <i class="fa-solid fa-user"></i>
+                        <p hidden>About</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-browser"></i>
-                    <p hidden>Projects</p>
+                    <a href="#projects">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p hidden>Projects</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-messages"></i>
-                    <p hidden>Contact</p>
+                    <a href="#contact">
+                        <i class="fa-solid fa-message"></i>
+                        <p hidden>Contact</p>
+                    </a>
                 </li>
             </ul>
             <button class="toTop">
-                <i class="fa-solid fa-chevron-up"></i>
+                <i class="fa-solid fa-circle-chevron-up fa-2x"></i>
             </button>
         </nav>
     </header> 
 
     <main>
-        <section class="home">
-            <div class="background">
-                <div class="circleOutlineContainer">
-                    <div class="circleOutline small"></div>
-                    <div class="circleOutline large"></div>
-                </div> <!-- accentLine -->
-                <div class="imgContainer">
+        <section class="home" id="home">
+            <div class="background wrapper">
+                <div class="bgLayer1">
                     <div class="mainImage circle">
                         <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
                     </div> <!-- mainImage-->
                     <div class="bgImage circle">
                         <img src="./assets/bgImage.jpg" alt="black and white image of a main standing on a rock in the water">
                     </div> <!-- bgImage-->
-                </div> <!-- imgContainer-->
-                <div class="circleContainer">
-                    <div class="circle large"></div>
-                    <div class="circle large"></div>
-                </div>
-            </div> <!-- background-->
+                </div> <!-- bgLayer1-->
+                
+                <div class="bgLayer2">
+                    <div class="circleOutlineContainer">
+                        <div class="circleOutline small"></div>
+                        <div class="circleOutline large"></div>
+                    </div> <!-- circleOutlineContainer-->
+                    <div class="lineContainer">
+                        <div class="accentLine bottom"></div>
+                        <div class="accentLine top"></div>
+                    </div> <!-- lineContainer-->
+                    
+                    <div class="circleContainer">
+                        <div class="circle large"></div>
+                        <div class="circle small"></div>
+                    </div> <!--circleContainer-->
+
+                    <div class="">
+                        <div class="circleOutline end"></div>
+                    </div> <!-- circleOutlineContainer-->
+                    
+                </div> <!-- bgLayer2-->
+            </div> <!--background-->
             <div class=" wrapper sectionText">
                 <h1>tina lu</h1>
                 <div class="lineContainer">
@@ -100,7 +121,7 @@
             </div> <!-- sectionText-->
         </section> <!--home-->
 
-        <section class="wrapper about">
+        <section class="wrapper about" id="about">
             <div class="sectionHeader">
                 <h2>about me</h2>
                 <div class="lineContainer">
@@ -159,7 +180,7 @@
             </div> <!-- sectionContent-->
         </section> <!-- about -->
 
-        <section class="wrapper projects">
+        <section class="wrapper projects" id="projects">
             <div class="sectionHeader">
                 <h2>projects</h2>
                 <div class="accentLine"></div>
@@ -217,7 +238,7 @@
             </div> <!-- sectionContent-->
         </section> <!-- projects -->
 
-        <section class="wrapper contact">
+        <section class="wrapper contact" id="contact">
             <div class="images">
                 <div class="mainImage circle">
                     <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">

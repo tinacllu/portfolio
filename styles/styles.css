@@ -273,7 +273,7 @@ h4 {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .wrapper {
@@ -306,7 +306,8 @@ img {
 }
 
 .accentLine {
-  border-top: 5px solid #fd5800;
+  background-color: #fd5800;
+  height: 5px;
 }
 
 ul {
@@ -326,6 +327,10 @@ input, textarea {
 a {
   color: black;
   text-decoration: none;
+}
+
+button {
+  all: unset;
 }
 
 header {
@@ -351,10 +356,12 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px;
+  margin: 20px 20px 0;
   width: 5%;
 }
 .leftPanel .logo {
+  -ms-flex-item-align: center;
+      align-self: center;
   background-color: #fd5800;
   border-radius: 50%;
   width: 30px;
@@ -370,6 +377,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 30vh;
 }
 .leftPanel .socialMediaContainer .listItem {
@@ -377,9 +390,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .leftPanel .socialMediaContainer .navLine {
   height: 19vh;
@@ -404,16 +414,132 @@ header {
   margin: 20px;
   width: 5%;
 }
-
-.home .sectionText {
+.rightPanel .navIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 30vw;
-      flex-basis: 30vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rightPanel .toTop {
+  margin-bottom: 20px;
+}
+.rightPanel .toTop i {
+  color: #fd5800;
+  opacity: 50%;
+}
+
+.background {
+  position: relative;
+}
+.background .bgLayer1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: visible;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+.background .bgLayer1 .mainImage {
+  width: 700px;
+  height: 700px;
+  -webkit-transform: translate(20%);
+          transform: translate(20%);
+}
+.background .bgLayer1 .bgImage {
+  z-index: -9;
+  -webkit-transform: scale(3) translate(20%);
+          transform: scale(3) translate(20%);
+}
+.background .bgLayer2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.background .bgLayer2 .circleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.background .bgLayer2 .circleContainer .circle {
+  background-color: #fd5800;
+  opacity: 50%;
+}
+.background .bgLayer2 .circleContainer .circle.small {
+  height: 100px;
+  width: 100px;
+}
+.background .bgLayer2 .circleContainer .circle.large {
+  height: 250px;
+  width: 250px;
+  margin-right: 100px;
+}
+
+.home {
+  min-height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home .sectionText {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 9;
+}
+.home h1, .home h2 {
+  -webkit-writing-mode: sideways-lr;
+      -ms-writing-mode: sideways-lr;
+          writing-mode: sideways-lr;
 }
 .home .role {
   display: -webkit-box;

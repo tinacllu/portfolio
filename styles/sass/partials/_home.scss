@@ -1,13 +1,125 @@
 @use "./shared/variables" as *;
 @use "./shared/typography";
 
+.background {
+    position: relative;
+    .bgLayer1 {
+        position:absolute;
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        .mainImage{
+            width: 700px;
+            height: 700px;
+            transform: translate(20%);
+        }
+        .bgImage {
+            z-index: -9;
+            transform: scale(3) translate(20%);
+            
+            // width: clamp(800px, 80vw, 1500px);
+            // height: auto;
+        }
+    }
+
+    .bgLayer2 {
+        position:absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transform: translateY(100%);
+        // .circleOutlineContainer {
+        //     overflow: visible;
+        //     display: flex;
+        //     align-items: center;
+        //     transform: translateX(-300px); 
+        //     display: none;
+        // }
+        // .circleOutline {
+        //     display: none;
+        //     border-radius: 50%;
+        //     border: 1px solid $darkGray;
+        //     width: 300px;
+        //     height: 300px;
+        //         &.small {
+        //             transform: scale(2) translate(40px);
+        //         }
+        //         &.large {
+        //             transform: scale(3);
+        //         }
+        //         &.end {
+        //             transform: scale(3.5) translateX(40px);
+        //         }
+        //     } 
+        
+        .circleContainer {
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            // transform: translateX(-20%);
+            .circle {
+                background-color: $brightOrange;
+                opacity: 50%;
+                &.small {
+                    height: 100px;
+                    width: 100px;
+                    
+                }
+                &.large {
+                    height: 250px;
+                    width: 250px;
+                    margin-right: 100px;
+                }
+            }
+        }
+        
+        // .lineContainer {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     width: 150px;
+        //     margin: 0 150px;
+        //     display: none;
+        //     .accentLine {
+        //         width: 5px;
+        //         &.top {
+        //             height: 80vh;
+        //             background-color: blue;
+        //         }
+        //         &.bottom {
+        //             align-self: flex-end;
+        //             height: 60vh;
+        
+        //         }
+        //     }
+        // }
+    }
+}
+
 
 .home {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     .sectionText {
+        align-self: flex-end;
+        height: 100%;
         display: flex;
-        flex-basis: 30vw;
         justify-content: space-between;
+        align-items: flex-end;
+        z-index: 9;
     }
+
+    h1, h2 {
+        writing-mode: sideways-lr;
+    }
+     
+
 
     .role {
         display: flex;

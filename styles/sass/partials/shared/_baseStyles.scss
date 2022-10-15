@@ -2,7 +2,7 @@
 @use "./typography";
 
 section {
-    min-height: 100vh;
+    min-height: 100%;
 }
 .wrapper {
     margin: 0 auto;
@@ -42,7 +42,8 @@ img {
 }
 
 .accentLine {
-    border-top: 5px solid $brightOrange;
+    background-color: $brightOrange;
+    height: 5px;
 }
 
 ul {
@@ -62,4 +63,8 @@ input, textarea {
 a {
     color: black;
     text-decoration: none;
+}
+
+button {
+    all: unset;
 }
