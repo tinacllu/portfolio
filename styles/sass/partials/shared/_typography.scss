@@ -1,0 +1,58 @@
+@use "./variables" as *;
+
+@font-face {
+    font-family: "Khand";
+    src: url(../fonts/Khand/Khand-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Khand";
+    src: url(../fonts/Khand/Khand-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Jura";
+    src: url(../fonts/Jura/static/Jura-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Jura";
+    src: url(../fonts/Jura/static/Jura-Bold.ttf);
+    font-weight: bold;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: calc(1.25 * $baseFontSize);
+    color: $darkGray;
+    font-weight: normal;
+    font-family: Jura, sans-serif;
+    // line-height: calc(2 * $baseFontSize);
+    // letter-spacing: calc(0.125 * $baseFontSize);
+}
+
+h1 {
+    font-size: calc(6 * $baseFontSize);
+}
+
+h2 {
+    font-size: calc(5 * $baseFontSize);
+    color: black;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: calc(4 * $baseFontSize);
+    margin: 0;
+}
+
+h4 {
+    font-size: calc(2 * $baseFontSize);
+    margin: 20px 0;
+}

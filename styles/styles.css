@@ -221,6 +221,61 @@ template {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Khand";
+  src: url(../fonts/Khand/Khand-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Khand";
+  src: url(../fonts/Khand/Khand-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Jura";
+  src: url(../fonts/Jura/static/Jura-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Jura";
+  src: url(../fonts/Jura/static/Jura-Bold.ttf);
+  font-weight: bold;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1.25rem;
+  color: #151515;
+  font-weight: normal;
+  font-family: Jura, sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+  color: black;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+section {
+  min-height: 100vh;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1400px;
@@ -251,21 +306,103 @@ img {
 }
 
 .accentLine {
-  border-top: 5px solid black;
+  border-top: 5px solid #fd5800;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 input, textarea {
   all: unset;
-  background-color: white;
-  border: 1px solid black;
+  border: 1px solid #6a6a75;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+  position: sticky;
+  top: 0px;
+}
+
+.leftPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  width: 5%;
+}
+.leftPanel .logo {
+  background-color: #fd5800;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  text-align: center;
+}
+.leftPanel .socialMediaContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 30vh;
+}
+.leftPanel .socialMediaContainer .listItem {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.leftPanel .socialMediaContainer .navLine {
+  height: 19vh;
+  width: 3px;
+  background-color: black;
+}
+
+.rightPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 20px;
+  width: 5%;
 }
 
 .home .sectionText {
@@ -370,13 +507,15 @@ input, textarea {
 }
 .about .sectionContent .aboutMe .imgContainer {
   width: 30%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .about .sectionContent .aboutMe .textContainer {
   width: 70%;
-  margin: 30px;
+  margin: 60px;
 }
 .about .sectionContent .techStack {
-  width: 70%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,8 +525,12 @@ input, textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.about .sectionContent .techStack li {
+  margin: 50px;
+}
 
 .projects {
+  background-color: lightblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,6 +538,10 @@ input, textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.projects img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 .projects .sectionHeader {
   display: -webkit-box;
@@ -404,9 +551,11 @@ input, textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 30px;
 }
 .projects .sectionHeader .accentLine {
-  width: 100px;
+  width: 150px;
+  margin: 20px 0;
 }
 .projects .sectionContent {
   -ms-flex-item-align: center;
@@ -436,16 +585,47 @@ input, textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  margin: 20px;
 }
 .projects .sectionContent .projectContainer li {
-  margin: 20px;
+  margin: 30px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.projects .sectionContent .projectContainer .imgContainer {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .contact .sectionContent {
   display: -webkit-box;
@@ -459,7 +639,7 @@ input, textarea {
       -ms-flex-pack: center;
           justify-content: center;
   width: 60vw;
-  margin: 20px;
+  margin: 20px 20px 20px 100px;
 }
 .contact form {
   display: -webkit-box;
@@ -500,9 +680,9 @@ input, textarea {
 .contact form .messageContainer input, .contact form .messageContainer textarea {
   width: 100%;
 }
-.contact .end {
-  -ms-flex-item-align: center;
-      align-self: center;
+
+footer {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,9 +694,9 @@ input, textarea {
           justify-content: space-between;
   width: 60%;
 }
-.contact .end .accentLine, .contact .end p {
+footer .accentLine, footer p {
   width: 30%;
 }
-.contact .end p {
+footer p {
   text-align: center;
 }

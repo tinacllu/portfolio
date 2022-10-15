@@ -4,8 +4,10 @@
 @use "./partials/shared/baseStyles";
 @use "./partials/shared/mixins";
 
+@use "./partials/nav";
 @use "./partials/home";
 @use "./partials/about";
 @use "./partials/projects";
 @use "./partials/contact";
+@use "./partials/footer";
 

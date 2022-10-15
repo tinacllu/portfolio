@@ -1,0 +1,51 @@
+@use "./shared/variables" as *;
+@use "./shared/typography";
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: sticky;
+    top: 0px;
+}
+.leftPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    width: 5%;
+    .logo {
+        background-color: $brightOrange;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        color: white;
+        text-align: center;
+    }
+    .socialMediaContainer {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        .listItem {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navLine {
+            height: 19vh;
+            width: 3px;
+            background-color: black;
+        }
+
+    }
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px;
+    width: 5%;
+}

@@ -3,12 +3,14 @@
 
 .contact {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     .sectionContent {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 60vw;
-        margin: 20px;
+        margin: 20px 20px 20px 100px;
     }
 
     form {
@@ -35,20 +37,6 @@
             input, textarea {
                 width: 100%;
             }
-        }
-    }
-
-    .end {
-        align-self: center;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 60%;
-        .accentLine, p {
-            width: 30%;
-        }
-        p {
-            text-align: center;
         }
     }
 }

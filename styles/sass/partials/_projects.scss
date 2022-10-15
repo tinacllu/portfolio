@@ -2,13 +2,19 @@
 @use "./shared/typography";
 
 .projects {
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
+    img {
+        filter: grayscale(100%);
+    }
     .sectionHeader {
         display: flex;
         flex-direction: column;
+        margin: 30px;
         .accentLine {
-            width: 100px;
+            width: 150px;
+            margin: 20px 0;
         }
     }
     .sectionContent {
@@ -24,9 +30,23 @@
         .projectContainer {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
+            margin: 20px;
             li {
-                margin: 20px;
+                margin: 30px;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .imgContainer {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
             }
         }
     }

@@ -32,18 +32,23 @@
             align-items: center;
             .imgContainer {
                 width: 30%;
+                border-radius: 50%;
+                overflow: hidden;
             }
             .textContainer {
                 width: 70%;
-                margin: 30px;
+                margin: 60px;
             }
         }
 
         .techStack {
-            width: 70%;
+            width: 80%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            li {
+                margin: 50px;
+            }
         }
     }
 }

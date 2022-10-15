@@ -13,22 +13,20 @@
     <header>
         <div class="leftPanel">
             <div class="logo">tl</div>
-            <div class="socialMediaContainer">
-                <ul>
-                    <li class="listItem">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    </li>
-                    <li class="listItem">
-                        <a href="#"><i class="fa-brands fa-github"></i></a><!--  add placeholdertext/property where on mouse hover it says github -->
-                    </li>
-                    <li class="listItem">
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                    </li>
-                    <li class="listItem">
-                        <div class="accentLine"></div>
-                    </li>
-                </ul>
-            </div> <!--socialMediaContainer-->
+            <ul class="socialMediaContainer">
+                <li class="listItem">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="listItem">
+                    <a href="#"><i class="fa-brands fa-github"></i></a><!--  add placeholdertext/property where on mouse hover it says github -->
+                </li>
+                <li class="listItem">
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </li>
+                <li class="listItem">
+                    <div class="navLine"></div>
+                </li>
+            </ul> <!--socialMediaContainer-->
         </div>
         <nav class="rightPanel">
             <ul>
@@ -55,210 +53,212 @@
         </nav>
     </header> 
 
-    <section class="home">
-        <div class="background">
-            <div class="circleOutlineContainer">
-                <div class="circleOutline small"></div>
-                <div class="circleOutline large"></div>
-            </div> <!-- accentLine -->
-            <div class="imgContainer">
+    <main>
+        <section class="home">
+            <div class="background">
+                <div class="circleOutlineContainer">
+                    <div class="circleOutline small"></div>
+                    <div class="circleOutline large"></div>
+                </div> <!-- accentLine -->
+                <div class="imgContainer">
+                    <div class="mainImage circle">
+                        <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
+                    </div> <!-- mainImage-->
+                    <div class="bgImage circle">
+                        <img src="./assets/bgImage.jpg" alt="black and white image of a main standing on a rock in the water">
+                    </div> <!-- bgImage-->
+                </div> <!-- imgContainer-->
+                <div class="circleContainer">
+                    <div class="circle large"></div>
+                    <div class="circle large"></div>
+                </div>
+            </div> <!-- background-->
+            <div class=" wrapper sectionText">
+                <h1>tina lu</h1>
+                <div class="lineContainer">
+                    <div class="accentLine lineLeft"></div>
+                    <div class="accentLine lineRight"></div>
+                </div>
+                <h2>hello, world!</h2>
+                <div class="role">
+                    <h3>front-end developer</h3>
+                    <div class="swipe">
+                        <h3>& </h3>
+                        <ul class="otherRoles">
+                            <li>
+                                <h3>scientist</h3>
+                            </li>
+                            <li hidden>
+                                <h3>artist</h3>
+                            </li>
+                            <li hidden>
+                                <h3>foodie</h3>
+                            </li>
+                        </ul>
+                    </div> <!-- swipe-->
+                </div> <!-- role-->
+            </div> <!-- sectionText-->
+        </section> <!--home-->
+
+        <section class="wrapper about">
+            <div class="sectionHeader">
+                <h2>about me</h2>
+                <div class="lineContainer">
+                    <div class="accentLine"></div>
+                    <div class="accentLine"></div>
+                </div>
+            </div> <!-- sectionHeader-->
+            <div class="sectionContent">
+                <div class="aboutMe">
+                    <div class="imgContainer">
+                        <img src="https://placekitten.com/500/500">
+                    </div> <!-- imgContainer-->
+                    <div class="textContainer">
+                        <h3>hello!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi, porro aliquid optio quod deserunt tenetur pariatur quibusdam saepe nemo ratione iure nulla repellat nobis, vero odit odio veritatis quas perferendis est inventore. Qui provident nisi quas placeat molestiae harum earum illo, inventore iste eos ipsa doloremque dolorem tempore laborum dolores possimus sed labore in recusandae doloribus, et vitae ipsum accusamus? Vitae ipsa amet est perferendis minima, explicabo perspiciatis minus ullam id libero. Nisi molestias pariatur voluptate. Vitae nobis dolore facere eligendi, quae culpa molestiae, repudiandae inventore enim consequuntur, officiis quod. Minima, porro. Voluptatem officiis rem cupiditate ut aliquid repellat.</p>
+                    </div>
+                </div> <!-- aboutMe-->
+                <ul class="techStack">
+                    <li>
+                        <i class="fa-brands fa-html5 fa-2x"></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3 fa-2x"></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-sass fa-2x"></i>
+                        <p>SASS</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-square-js fa-2x"></i>
+                        <p>JavaScript</p>
+                    </li>
+                    <li>
+                        <!--insert jquery icon-->
+                        <p>jQuery</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-react fa-2x"></i>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-git-alt fa-2x"></i>
+                        <p>Git</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github fa-2x"></i>
+                        <p>GitHub</p>
+                    </li>
+                    <li>
+                        <!-- insert image firebase logo-->
+                        <p>Firebase</p>
+                    </li>
+                </ul> <!-- techStack-->
+            </div> <!-- sectionContent-->
+        </section> <!-- about -->
+
+        <section class="wrapper projects">
+            <div class="sectionHeader">
+                <h2>projects</h2>
+                <div class="accentLine"></div>
+            </div>
+            
+            <div class="sectionContent">
+                <div class="arrowContainer arrowLeft">
+                    <i class="fa-solid fa-circle-chevron-left fa-3x"></i>
+                </div> <!-- arrowContainer arrowLeft -->
+                <ul class="projectContainer">
+                    <li>
+                        <div class="imgContainer">
+                            <img src="https://placekitten.com/400/400">
+                        </div> <!-- imgContainer-->
+                        <div class="textContainer">
+                            <h3>01</h3>
+                            <h4>Project Title</h4>
+                            <p>Project Description</p>
+                            <div class="links">
+                                <a href="#">Live</a>
+                                <a href="#">GitHub Repo</a>
+                            </div>
+                        </div> <!-- textContainer -->
+                    </li>
+                    <li>
+                        <div class="imgContainer">
+                            <img src="https://placekitten.com/400/400">
+                        </div> <!-- imgContainer-->
+                        <div class="textContainer">
+                            <h3>02</h3>
+                            <h4>Project Title</h4>
+                            <p>Project Description</p>
+                            <div class="links">
+                                <a href="#">Live</a>
+                                <a href="#">GitHub Repo</a>
+                        </div> <!-- textContainer -->
+                    </li>
+                    <li>
+                        <div class="imgContainer">
+                            <img src="https://placekitten.com/400/400">
+                        </div> <!-- imgContainer-->
+                        <div class="textContainer">
+                            <h3>03</h3>
+                            <h4>Project Title</h4>
+                            <p>Project Description</p>
+                            <div class="links">
+                                <a href="#">Live</a>
+                                <a href="#">GitHub Repo</a>
+                        </div> <!-- textContainer -->
+                    </li>
+                </ul> <!-- projectContainer -->
+                <div class="arrowContainer arrowRight">
+                    <i class="fa-solid fa-circle-chevron-right fa-3x"></i>
+                </div> <!-- arrowContainer arrowRight-->
+            </div> <!-- sectionContent-->
+        </section> <!-- projects -->
+
+        <section class="wrapper contact">
+            <div class="images">
                 <div class="mainImage circle">
                     <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
-                </div> <!-- mainImage-->
-                <div class="bgImage circle">
-                    <img src="./assets/bgImage.jpg" alt="black and white image of a main standing on a rock in the water">
-                </div> <!-- bgImage-->
-            </div> <!-- imgContainer-->
-            <div class="circleContainer">
-                <div class="circle large"></div>
-                <div class="circle large"></div>
-            </div>
-        </div> <!-- background-->
-        <div class=" wrapper sectionText">
-            <h2>hello</h2>
-            <div class="lineContainer">
-                <div class="accentLine lineLeft"></div>
-                <div class="accentLine lineRight"></div>
-            </div>
-            <h1>tina lu</h1>
-            <div class="role">
-                <h3>front-end developer</h3>
-                <div class="swipe">
-                    <h3>& </h3>
-                    <ul class="otherRoles">
+                </div><!-- mainImage-->
+                <!-- <div class="halfCircle"></div> -->
+            </div> <!--images-->
+            <div class="sectionContent">
+                <h2>contact</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur nobis labore, veritatis ab explicabo ea doloremque aspernatur veniam eligendi est!</p>
+                <form action="" method="POST">
+                    <ul class="personalInfo">
                         <li>
-                            <h3>scientist</h3>
+                            <label for="name" hidden>name:</label>
+                            <input type="text" name="name" id="name" placeholder="name" required>
                         </li>
-                        <li hidden>
-                            <h3>artist</h3>
+                        <li>
+                            <label for="email" hidden>email:</label>
+                            <input type="email" name="email" id="email" placeholder="email" required>
                         </li>
-                        <li hidden>
-                            <h3>foodie</h3>
+                    </ul> <!-- personalInfo-->
+                    <ul class="messageContainer">
+                        <li>
+                            <label for="subject" hidden>subject (optional):</label>
+                            <input type="text" name="subject" id="subject" placeholder="subject">
                         </li>
-                    </ul>
-                </div> <!-- swipe-->
-            </div> <!-- role-->
-        </div> <!-- sectionText-->
-    </section> <!--home-->
+                        <li>
+                            <label for="message" hidden>message:</label>
+                            <textarea name="message" id="message" placeholder="message" cols="50" rows="10" required></textarea>
+                        </li>
+                    </ul> <!-- messageContainer -->
+                    <button class="submit">Send Message!</button>
+                </form>
+            </div> <!-- sectionContent-->
+        </section> <!-- contact -->
+    </main>
 
-    <section class="wrapper about">
-        <div class="sectionHeader">
-            <h2>about me</h2>
-            <div class="lineContainer">
-                <div class="accentLine"></div>
-                <div class="accentLine"></div>
-            </div>
-        </div> <!-- sectionHeader-->
-        <div class="sectionContent">
-            <div class="aboutMe">
-                <div class="imgContainer">
-                    <img src="https://placekitten.com/400/400">
-                </div> <!-- imgContainer-->
-                <div class="textContainer">
-                    <h3>hello!</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi, porro aliquid optio quod deserunt tenetur pariatur quibusdam saepe nemo ratione iure nulla repellat nobis, vero odit odio veritatis quas perferendis est inventore. Qui provident nisi quas placeat molestiae harum earum illo, inventore iste eos ipsa doloremque dolorem tempore laborum dolores possimus sed labore in recusandae doloribus, et vitae ipsum accusamus? Vitae ipsa amet est perferendis minima, explicabo perspiciatis minus ullam id libero. Nisi molestias pariatur voluptate. Vitae nobis dolore facere eligendi, quae culpa molestiae, repudiandae inventore enim consequuntur, officiis quod. Minima, porro. Voluptatem officiis rem cupiditate ut aliquid repellat.</p>
-                </div>
-            </div> <!-- aboutMe-->
-            <ul class="techStack">
-                <li>
-                    <i class="fa-brands fa-html5"></i>
-                    <p>HTML5</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-css3"></i>
-                    <p>CSS3</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-sass"></i>
-                    <p>SASS</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-square-js"></i>
-                    <p>JavaScript</p>
-                </li>
-                <li>
-                    <!--insert logo of jquery-->
-                    <p>jQuery</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-react"></i>
-                    <p>React</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-git-alt"></i>
-                    <p>Git</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                </li>
-                <li>
-                    <!-- insert image firebase logo-->
-                    <p>Firebase</p>
-                </li>
-            </ul> <!-- techStack-->
-        </div> <!-- sectionContent-->
-    </section> <!-- about -->
-
-    <section class="wrapper projects">
-        <div class="sectionHeader">
-            <h2>projects</h2>
-            <div class="accentLine"></div>
-        </div>
-        
-        <div class="sectionContent">
-            <div class="arrowContainer arrowLeft">
-                <i class="fa-solid fa-chevron-left"></i>
-            </div> <!-- arrowContainer arrowLeft -->
-            <ul class="projectContainer">
-                <li>
-                    <div class="imgContainer">
-                        <img src="https://placekitten.com/200/200">
-                    </div> <!-- imgContainer-->
-                    <div class="textContainer">
-                        <h3>01</h3>
-                        <h4>Project Title</h4>
-                        <p>Project Description</p>
-                        <div class="links">
-                            <a href="#">Live</a>
-                            <a href="#">GitHub Repo</a>
-                        </div>
-                    </div> <!-- textContainer -->
-                </li>
-                <li>
-                    <div class="imgContainer">
-                        <img src="https://placekitten.com/200/200">
-                    </div> <!-- imgContainer-->
-                    <div class="textContainer">
-                        <h3>02</h3>
-                        <h4>Project Title</h4>
-                        <p>Project Description</p>
-                        <div class="links">
-                            <a href="#">Live</a>
-                            <a href="#">GitHub Repo</a>
-                    </div> <!-- textContainer -->
-                </li>
-                <li>
-                    <div class="imgContainer">
-                        <img src="https://placekitten.com/200/200">
-                    </div> <!-- imgContainer-->
-                    <div class="textContainer">
-                        <h3>03</h3>
-                        <h4>Project Title</h4>
-                        <p>Project Description</p>
-                        <div class="links">
-                            <a href="#">Live</a>
-                            <a href="#">GitHub Repo</a>
-                    </div> <!-- textContainer -->
-                </li>
-            </ul> <!-- projectContainer -->
-            <div class="arrowContainer arrowRight">
-                <i class="fa-regular fa-chevron-right"></i>
-            </div> <!-- arrowContainer arrowRight-->
-        </div> <!-- sectionContent-->
-    </section> <!-- projects -->
-
-    <section class="wrapper contact">
-        <div class="images">
-            <div class="mainImage circle">
-                <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
-            </div><!-- mainImage-->
-            <!-- <div class="halfCircle"></div> -->
-        </div> <!--images-->
-        <div class="sectionContent">
-            <h2>contact</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur nobis labore, veritatis ab explicabo ea doloremque aspernatur veniam eligendi est!</p>
-            <form action="" method="POST">
-                <ul class="personalInfo">
-                    <li>
-                        <label for="name" hidden>name:</label>
-                        <input type="text" name="name" id="name" placeholder="name" required>
-                    </li>
-                    <li>
-                        <label for="email" hidden>email:</label>
-                        <input type="email" name="email" id="email" placeholder="email" required>
-                    </li>
-                </ul> <!-- personalInfo-->
-                <ul class="messageContainer">
-                    <li>
-                        <label for="subject" hidden>subject (optional):</label>
-                        <input type="text" name="subject" id="subject" placeholder="subject">
-                    </li>
-                    <li>
-                        <label for="message" hidden>message:</label>
-                        <textarea name="message" id="message" placeholder="message" required></textarea>
-                    </li>
-                </ul> <!-- messageContainer -->
-                <button class="submit">Send Message!</button>
-            </form>
-            <div class="end">
-                <div class="accentLine lineLeft"></div>
-                <p>tina lu © 2022</p>
-                <div class="accentLine lineRight"></div>
-            </div>
-        </div>
-    </section> <!-- contact -->
-
+    <footer>
+        <div class="accentLine lineLeft"></div>
+        <p>tina lu © 2022</p>
+        <div class="accentLine lineRight"></div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
