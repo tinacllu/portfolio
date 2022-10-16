@@ -2,12 +2,21 @@
 @use "./typography";
 
 section {
-    min-height: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
 }
+
+body {
+    max-width: 1800px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
 .wrapper {
     margin: 0 auto;
     max-width: 1400px;
     width: 90%;
+    min-width: calc(90% - 160px);
 }
 
 img {
@@ -67,4 +76,28 @@ a {
 
 button {
     all: unset;
+}
+
+.sectionBg {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+    .circle {
+        background-color: $brightOrange;
+        opacity: 50%;
+        transform: translate(10vw, 10vh);
+    }
+    .circleOutline {
+        border: 50px solid $brightOrange;
+        opacity: 50%;
+        border-radius: 50%;
+        align-self: flex-start;
+        width: 600px;
+        height: 600px;
+        transform: translate(-15vw, -20vh);
+    }
 }

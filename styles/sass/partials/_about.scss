@@ -2,30 +2,38 @@
 @use "./shared/typography";
 
 .about {
-    background-color: tomato;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    // overflow: hidden;
+    position: relative;
     .sectionHeader {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        width: 20%;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 100vh;
         h2 {
             writing-mode: sideways-lr;
+            height: 45%;
         }
         .lineContainer {
-            background-color: pink;
-            width: 50%;
             height: 50%;
+            .accentLine {
+                width: 5px;
+                height: clamp(300px, 40vh, 500px);
+                transform: translateX(5px);
+            }
         }
-        
     }
     .sectionContent {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 90%;
+        padding: 50px;
         .aboutMe {
             display: flex;
             justify-content: space-between;
@@ -34,6 +42,7 @@
                 width: 30%;
                 border-radius: 50%;
                 overflow: hidden;
+                filter: grayscale(100%);
             }
             .textContainer {
                 width: 70%;
@@ -48,6 +57,7 @@
             justify-content: space-between;
             li {
                 margin: 50px;
+                text-align: center;
             }
         }
     }

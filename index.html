@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header hidden>
+    <header>
         <div class="leftPanel">
             <div class="logo">tl</div>
             <ul class="socialMediaContainer">
@@ -69,42 +69,26 @@
                         <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
                     </div> <!-- mainImage-->
                     <div class="bgImage circle">
-                        <img src="./assets/bgImage.jpg" alt="black and white image of a main standing on a rock in the water">
+                        <img src="./assets/umbrella.jpg" alt="black and white image of a main standing on a rock in the water">
                     </div> <!-- bgImage-->
                 </div> <!-- bgLayer1-->
                 
-                <div class="bgLayer2">
-                    <div class="circleOutlineContainer">
-                        <div class="circleOutline small"></div>
-                        <div class="circleOutline large"></div>
-                    </div> <!-- circleOutlineContainer-->
-                    <div class="lineContainer">
-                        <div class="accentLine bottom"></div>
-                        <div class="accentLine top"></div>
-                    </div> <!-- lineContainer-->
-                    
-                    <div class="circleContainer">
-                        <div class="circle large"></div>
-                        <div class="circle small"></div>
-                    </div> <!--circleContainer-->
-
-                    <div class="">
-                        <div class="circleOutline end"></div>
-                    </div> <!-- circleOutlineContainer-->
-                    
-                </div> <!-- bgLayer2-->
+                <div class="bgLayer2 circleContainer">
+                    <div class="circle large"></div>
+                    <div class="circle small"></div>
+                </div> <!-- bgLayer2 circleContainer-->
             </div> <!--background-->
             <div class=" wrapper sectionText">
                 <h1>tina lu</h1>
-                <div class="lineContainer">
+                <!--<div class="lineContainer">
                     <div class="accentLine lineLeft"></div>
                     <div class="accentLine lineRight"></div>
-                </div>
-                <h2>hello, world!</h2>
+                </div>-->
+                <p>hello, world!</p>
                 <div class="role">
-                    <h3>front-end developer</h3>
+                    <h2>front-end developer</h2>
                     <div class="swipe">
-                        <h3>& </h3>
+                        <h3>&</h3>
                         <ul class="otherRoles">
                             <li>
                                 <h3>scientist</h3>
@@ -115,20 +99,14 @@
                             <li hidden>
                                 <h3>foodie</h3>
                             </li>
-                        </ul>
+                        </ul> <!--otherRoles-->
                     </div> <!-- swipe-->
                 </div> <!-- role-->
             </div> <!-- sectionText-->
         </section> <!--home-->
 
         <section class="wrapper about" id="about">
-            <div class="sectionHeader">
-                <h2>about me</h2>
-                <div class="lineContainer">
-                    <div class="accentLine"></div>
-                    <div class="accentLine"></div>
-                </div>
-            </div> <!-- sectionHeader-->
+            
             <div class="sectionContent">
                 <div class="aboutMe">
                     <div class="imgContainer">
@@ -178,6 +156,16 @@
                     </li>
                 </ul> <!-- techStack-->
             </div> <!-- sectionContent-->
+            <div class="sectionHeader">
+                <div class="lineContainer">
+                    <div class="accentLine"></div>
+                </div> <!--lineContainer-->
+                <h2>about me</h2>
+            </div> <!-- sectionHeader-->
+            <div class="sectionBg">
+                <div class="circleOutline"></div>
+                <div class="circle"></div>
+            </div> <!--sectionBg-->
         </section> <!-- about -->
 
         <section class="wrapper projects" id="projects">
@@ -198,10 +186,10 @@
                         <div class="textContainer">
                             <h3>01</h3>
                             <h4>Project Title</h4>
-                            <p>Project Description</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate fuga excepturi eius laudantium, omnis natus dignissimos similique quisquam necessitatibus?</p>
                             <div class="links">
-                                <a href="#">Live</a>
-                                <a href="#">GitHub Repo</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div> <!-- textContainer -->
                     </li>
@@ -212,10 +200,10 @@
                         <div class="textContainer">
                             <h3>02</h3>
                             <h4>Project Title</h4>
-                            <p>Project Description</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corrupti fugiat corporis voluptatibus veritatis dolores facere magni! Ipsam, esse recusandae.</p>
                             <div class="links">
-                                <a href="#">Live</a>
-                                <a href="#">GitHub Repo</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
                         </div> <!-- textContainer -->
                     </li>
                     <li>
@@ -225,10 +213,10 @@
                         <div class="textContainer">
                             <h3>03</h3>
                             <h4>Project Title</h4>
-                            <p>Project Description</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum libero totam quos voluptatibus molestias sint omnis laborum numquam impedit aut?</p>
                             <div class="links">
-                                <a href="#">Live</a>
-                                <a href="#">GitHub Repo</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
                         </div> <!-- textContainer -->
                     </li>
                 </ul> <!-- projectContainer -->
@@ -239,14 +227,11 @@
         </section> <!-- projects -->
 
         <section class="wrapper contact" id="contact">
-            <div class="images">
                 <div class="mainImage circle">
                     <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
-                </div><!-- mainImage-->
-                <!-- <div class="halfCircle"></div> -->
-            </div> <!--images-->
+                </div> <!-- mainImage circle-->
             <div class="sectionContent">
-                <h2>contact</h2>
+                <h2>let's connect !</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur nobis labore, veritatis ab explicabo ea doloremque aspernatur veniam eligendi est!</p>
                 <form action="" method="POST">
                     <ul class="personalInfo">
@@ -269,9 +254,13 @@
                             <textarea name="message" id="message" placeholder="message" cols="50" rows="10" required></textarea>
                         </li>
                     </ul> <!-- messageContainer -->
-                    <button class="submit">Send Message!</button>
+                    <button class="submit">Say hello!</button>
                 </form>
             </div> <!-- sectionContent-->
+            <div class="sectionBg">
+                <div class="circleOutline"></div>
+                <div class="circle"></div>
+            </div> <!--sectionBg-->
         </section> <!-- contact -->
     </main>
 

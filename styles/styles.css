@@ -253,7 +253,9 @@ body {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 10vw;
+  font-size: clamp(6rem, 10vw, 10rem);
+  margin: 0;
 }
 
 h2 {
@@ -273,13 +275,21 @@ h4 {
 }
 
 section {
-  min-height: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+body {
+  max-width: 1800px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1400px;
   width: 90%;
+  min-width: calc(90% - 160px);
 }
 
 img {
@@ -333,6 +343,39 @@ button {
   all: unset;
 }
 
+.sectionBg {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  z-index: -9;
+}
+.sectionBg .circle {
+  background-color: #fd5800;
+  opacity: 50%;
+  -webkit-transform: translate(10vw, 10vh);
+          transform: translate(10vw, 10vh);
+}
+.sectionBg .circleOutline {
+  border: 50px solid #fd5800;
+  opacity: 50%;
+  border-radius: 50%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 600px;
+  height: 600px;
+  -webkit-transform: translate(-15vw, -20vh);
+          transform: translate(-15vw, -20vh);
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,6 +386,7 @@ header {
   min-height: 100vh;
   position: sticky;
   top: 0px;
+  overflow: hidden;
 }
 
 .leftPanel {
@@ -357,7 +401,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 20px 0;
-  width: 5%;
 }
 .leftPanel .logo {
   -ms-flex-item-align: center;
@@ -377,13 +420,13 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 30vh;
+  height: clamp(300px, 30vh, 600px);
 }
 .leftPanel .socialMediaContainer .listItem {
   margin: 10px 0;
@@ -392,7 +435,7 @@ header {
   display: flex;
 }
 .leftPanel .socialMediaContainer .navLine {
-  height: 19vh;
+  height: clamp(100px, 25vh, 500px);
   width: 3px;
   background-color: black;
 }
@@ -442,7 +485,6 @@ header {
   position: relative;
 }
 .background .bgLayer1 {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,45 +508,36 @@ header {
           transform: translate(20%);
 }
 .background .bgLayer1 .bgImage {
+  opacity: 50%;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
   z-index: -9;
   -webkit-transform: scale(3) translate(20%);
           transform: scale(3) translate(20%);
 }
-.background .bgLayer2 {
+.background .circleContainer {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-}
-.background .bgLayer2 .circleContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  top: 40vh;
+  left: 40vw;
 }
-.background .bgLayer2 .circleContainer .circle {
+.background .circleContainer .circle {
   background-color: #fd5800;
   opacity: 50%;
 }
-.background .bgLayer2 .circleContainer .circle.small {
+.background .circleContainer .circle.small {
   height: 100px;
   width: 100px;
 }
-.background .bgLayer2 .circleContainer .circle.large {
+.background .circleContainer .circle.large {
   height: 250px;
   width: 250px;
   margin-right: 100px;
@@ -512,7 +545,8 @@ header {
 
 .home {
   min-height: 100vh;
-  overflow: hidden;
+  position: relative;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,11 +554,17 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .home .sectionText {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  height: 100%;
+  padding: 10px 0;
+  justify-self: flex-end;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,11 +575,27 @@ header {
       -ms-flex-align: end;
           align-items: flex-end;
   z-index: 9;
+  width: 100%;
+  height: 90vh;
 }
-.home h1, .home h2 {
+.home .sectionText h1 {
   -webkit-writing-mode: sideways-lr;
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
+}
+.home .sectionText h2 {
+  font-size: 4rem;
+}
+.home .sectionText h3 {
+  font-size: 3rem;
+}
+.home .sectionText p {
+  font-size: 2rem;
+  -webkit-writing-mode: sideways-lr;
+      -ms-writing-mode: sideways-lr;
+          writing-mode: sideways-lr;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .home .role {
   display: -webkit-box;
@@ -549,13 +605,14 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+  width: 350px;
 }
 .home .role .swipe {
   display: -webkit-box;
@@ -565,24 +622,30 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 200px;
+  width: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home .role .swipe .otherRoles {
+  padding-left: 20px;
 }
 
 .about {
-  background-color: tomato;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  position: relative;
 }
 .about .sectionHeader {
   display: -webkit-box;
@@ -592,20 +655,29 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+  height: 100vh;
 }
 .about .sectionHeader h2 {
   -webkit-writing-mode: sideways-lr;
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
+  height: 45%;
 }
 .about .sectionHeader .lineContainer {
-  background-color: pink;
-  width: 50%;
   height: 50%;
+}
+.about .sectionHeader .lineContainer .accentLine {
+  width: 5px;
+  height: clamp(300px, 40vh, 500px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 .about .sectionContent {
   display: -webkit-box;
@@ -618,7 +690,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 90%;
+  padding: 50px;
 }
 .about .sectionContent .aboutMe {
   display: -webkit-box;
@@ -635,6 +708,8 @@ header {
   width: 30%;
   border-radius: 50%;
   overflow: hidden;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 .about .sectionContent .aboutMe .textContainer {
   width: 70%;
@@ -653,10 +728,10 @@ header {
 }
 .about .sectionContent .techStack li {
   margin: 50px;
+  text-align: center;
 }
 
 .projects {
-  background-color: lightblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,8 +812,8 @@ header {
 .projects .sectionContent .projectContainer .imgContainer {
   border-radius: 50%;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 20px;
 }
 
@@ -752,6 +827,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.contact .images {
+  width: 40vw;
 }
 .contact .sectionContent {
   display: -webkit-box;
@@ -805,6 +883,19 @@ header {
 }
 .contact form .messageContainer input, .contact form .messageContainer textarea {
   width: 100%;
+}
+.contact form button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #ffe9e1;
+  color: #151515;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 0;
+  text-align: center;
 }
 
 footer {

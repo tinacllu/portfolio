@@ -4,7 +4,6 @@
 .background {
     position: relative;
     .bgLayer1 {
-        position:absolute;
         display: flex;
         flex-direction: row;
         overflow: visible;
@@ -17,122 +16,89 @@
             transform: translate(20%);
         }
         .bgImage {
+            opacity: 50%;
+            filter: brightness(130%);
             z-index: -9;
             transform: scale(3) translate(20%);
-            
-            // width: clamp(800px, 80vw, 1500px);
-            // height: auto;
         }
     }
 
-    .bgLayer2 {
-        position:absolute;
+    .circleContainer {
+        position: absolute;
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 100%;
-        transform: translateY(100%);
-        // .circleOutlineContainer {
-        //     overflow: visible;
-        //     display: flex;
-        //     align-items: center;
-        //     transform: translateX(-300px); 
-        //     display: none;
-        // }
-        // .circleOutline {
-        //     display: none;
-        //     border-radius: 50%;
-        //     border: 1px solid $darkGray;
-        //     width: 300px;
-        //     height: 300px;
-        //         &.small {
-        //             transform: scale(2) translate(40px);
-        //         }
-        //         &.large {
-        //             transform: scale(3);
-        //         }
-        //         &.end {
-        //             transform: scale(3.5) translateX(40px);
-        //         }
-        //     } 
-        
-        .circleContainer {
-            display: flex;
-            // justify-content: space-between;
-            align-items: center;
-            justify-content: center;
-            // transform: translateX(-20%);
-            .circle {
-                background-color: $brightOrange;
-                opacity: 50%;
-                &.small {
-                    height: 100px;
-                    width: 100px;
-                    
-                }
-                &.large {
-                    height: 250px;
-                    width: 250px;
-                    margin-right: 100px;
-                }
+        justify-content: center;
+        top: 40vh;
+        left: 40vw;
+        .circle {
+            background-color: $brightOrange;
+            opacity: 50%;
+            &.small {
+                height: 100px;
+                width: 100px;
+                
+            }
+            &.large {
+                height: 250px;
+                width: 250px;
+                margin-right: 100px;
             }
         }
-        
-        // .lineContainer {
-        //     display: flex;
-        //     justify-content: space-between;
-        //     width: 150px;
-        //     margin: 0 150px;
-        //     display: none;
-        //     .accentLine {
-        //         width: 5px;
-        //         &.top {
-        //             height: 80vh;
-        //             background-color: blue;
-        //         }
-        //         &.bottom {
-        //             align-self: flex-end;
-        //             height: 60vh;
-        
-        //         }
-        //     }
-        // }
     }
 }
 
-
 .home {
     min-height: 100vh;
-    overflow: hidden;
+    position: relative;
+    padding: 0;
+    // overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .sectionText {
-        align-self: flex-end;
-        height: 100%;
+        padding: 10px 0;
+        justify-self: flex-end;
+        position:absolute;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         z-index: 9;
+        width: 100%;
+        height: 90vh;
+    
+        h1 {
+            writing-mode: sideways-lr;
+        }
+        h2 {
+            font-size: calc(4 * $baseFontSize);
+        }
+        h3 {
+            font-size: calc(3 * $baseFontSize);
+        }
+        p {
+            font-size: calc(2 * $baseFontSize);
+            writing-mode: sideways-lr;
+            align-self: flex-start;
+        }
+         
     }
-
-    h1, h2 {
-        writing-mode: sideways-lr;
-    }
-     
-
-
     .role {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 200px;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: center;
+        width: 350px;
         .swipe {
             display: flex;
             flex-direction: row;
-            width: 200px;
+            width: 100%;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: center;
+            .otherRoles {
+                padding-left: 20px;
+            }
         }
     }
 }
