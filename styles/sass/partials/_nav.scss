@@ -6,9 +6,13 @@ header {
     display: flex;
     justify-content: space-between;
     min-height: 100vh;
+    // min-width: 100vw;
     position: sticky;
     top: 0px;
     overflow: hidden;
+    a {
+        z-index: 9;
+    }
 }
 
 .leftPanel {
@@ -47,7 +51,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin: 20px;
     width: 5%;
     .navIcons {

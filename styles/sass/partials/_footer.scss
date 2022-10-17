@@ -4,10 +4,14 @@ footer {
     align-items: center;
     justify-content: space-between;
     width: 60%;
-    .accentLine, p {
-        width: 30%;
+    height: fit-content;
+    .accentLine {
+        width: 40%;
+        border-radius: 5px;
     }
     p {
+        width: 20%;
+        min-width: fit-content;
         text-align: center;
     }
 }

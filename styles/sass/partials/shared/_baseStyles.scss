@@ -3,13 +3,13 @@
 
 section {
     min-height: 100vh;
-    padding: 100px 0;
 }
 
 body {
     max-width: 1800px;
     margin: 0 auto;
     overflow-x: hidden;
+    border: 5px solid red;
 }
 
 .wrapper {
@@ -72,6 +72,10 @@ input, textarea {
 a {
     color: black;
     text-decoration: none;
+    transition: 0.3s ease;
+    &:hover, &:focus {
+        color: $brightOrange;
+    }
 }
 
 button {

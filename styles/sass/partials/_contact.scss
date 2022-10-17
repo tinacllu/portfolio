@@ -41,7 +41,7 @@
             }
         }
         button {
-            align-self: center;
+            align-self: flex-end;
             background-color: $lightPink;
             color: $darkGray; 
             padding: 10px 20px;
@@ -49,6 +49,7 @@
             width: fit-content;
             margin: 10px 0;
             text-align: center;
+            
         }
     }
 }

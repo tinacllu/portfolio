@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 100px 0 0;
     // overflow: hidden;
     position: relative;
     .sectionHeader {
@@ -39,14 +40,21 @@
             justify-content: space-between;
             align-items: center;
             .imgContainer {
-                width: 30%;
+                width: 40%;
                 border-radius: 50%;
                 overflow: hidden;
-                filter: grayscale(100%);
+                //filter: grayscale(100%);
+                border: 5px solid $lightPink;
+                    img {
+                        transform: translateY(-40px);
+                    }
             }
             .textContainer {
-                width: 70%;
+                width: 60%;
                 margin: 60px;
+                p {
+                    margin: 20px 0;
+                }
             }
         }
 
