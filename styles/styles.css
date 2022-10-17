@@ -386,22 +386,13 @@ button {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 100vh;
-  position: sticky;
-  top: 0px;
-  overflow: hidden;
-}
-header a {
   z-index: 9;
 }
 
 .leftPanel {
+  min-height: 100vh;
+  width: 50px;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,7 +403,7 @@ header a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 20px 0;
+  margin: 20px 0 0;
 }
 .leftPanel .logo {
   -ms-flex-item-align: center;
@@ -453,6 +444,9 @@ header a {
 }
 
 .rightPanel {
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,8 +460,8 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px;
-  width: 5%;
+  margin: 20px 0;
+  width: 50px;
 }
 .rightPanel .navIcons {
   display: -webkit-box;
@@ -881,6 +875,7 @@ header a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  z-index: 999;
 }
 .contact form .personalInfo {
   display: -webkit-box;
@@ -923,6 +918,9 @@ header a {
   width: fit-content;
   margin: 10px 0;
   text-align: center;
+}
+.contact form button:hover, .contact form button:focus {
+  background-color: #6a6a75;
 }
 
 footer {

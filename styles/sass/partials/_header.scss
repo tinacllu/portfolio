@@ -3,23 +3,17 @@
 
 
 header {
-    display: flex;
-    justify-content: space-between;
-    min-height: 100vh;
-    // min-width: 100vw;
-    position: sticky;
-    top: 0px;
-    overflow: hidden;
-    a {
-        z-index: 9;
-    }
+    z-index: 9;
 }
 
 .leftPanel {
+    min-height: 100vh;
+    width: 50px;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px 20px 0;
+    margin: 20px 0 0;
     .logo {
         align-self: center;
         background-color: $brightOrange;
@@ -48,12 +42,15 @@ header {
 }
 
 .rightPanel {
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
-    width: 5%;
+    margin: 20px 0;
+    width: 50px;
     .navIcons {
         display: flex;
         flex-direction: column;
