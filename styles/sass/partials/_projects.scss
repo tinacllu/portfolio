@@ -6,6 +6,11 @@
     flex-direction: column;
     img {
         filter: grayscale(100%);
+        transition: 0.3s; 
+        &:hover, &:focus {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
     }
     .sectionHeader {
         display: flex;

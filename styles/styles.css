@@ -310,15 +310,6 @@ img {
   height: 500px;
 }
 
-.halfCircle {
-  width: 250px;
-  height: 250px;
-  border: 50px solid black;
-  border-bottom: 0;
-  border-left: 0;
-  border-radius: 0 300px 0 0;
-}
-
 .accentLine {
   background-color: #fd5800;
   height: 5px;
@@ -341,15 +332,19 @@ input, textarea {
 a {
   color: black;
   text-decoration: none;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 a:hover, a:focus {
   color: #fd5800;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-button {
-  all: unset;
+i:hover, i:focus {
+  color: #fd5800;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .sectionBg {
@@ -386,7 +381,7 @@ button {
 }
 
 header {
-  z-index: 9;
+  max-width: 1800px;
 }
 
 .leftPanel {
@@ -404,8 +399,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 0 0;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 .leftPanel .logo {
+  line-height: 26px;
   -ms-flex-item-align: center;
       align-self: center;
   background-color: #fd5800;
@@ -445,8 +443,8 @@ header {
 
 .rightPanel {
   min-height: 100vh;
-  position: fixed;
-  right: 0;
+  position: sticky;
+  float: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +478,7 @@ header {
           align-items: center;
 }
 .rightPanel .toTop {
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 .rightPanel .toTop i {
   color: #fd5800;
@@ -716,11 +714,11 @@ header {
   width: 40%;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid #ffe9e1;
+  border: 5px solid #6a6a75;
 }
 .about .sectionContent .aboutMe .imgContainer img {
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  max-width: 100%;
+  height: auto;
 }
 .about .sectionContent .aboutMe .textContainer {
   width: 60%;
@@ -757,6 +755,14 @@ header {
 .projects img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.projects img:hover, .projects img:focus {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .projects .sectionHeader {
   display: -webkit-box;
@@ -906,9 +912,17 @@ header {
 .contact form .messageContainer input, .contact form .messageContainer textarea {
   width: 100%;
 }
+.contact form input, .contact form textarea {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: white;
+}
+.contact form input:hover, .contact form input:focus, .contact form textarea:hover, .contact form textarea:focus {
+  -webkit-box-shadow: 5px 5px #dbdbdb;
+          box-shadow: 5px 5px #dbdbdb;
+}
 .contact form button {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  all: unset;
   background-color: #ffe9e1;
   color: #151515;
   padding: 10px 20px;
@@ -918,9 +932,44 @@ header {
   width: fit-content;
   margin: 10px 0;
   text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .contact form button:hover, .contact form button:focus {
-  background-color: #6a6a75;
+  background-color: #fdaa7e;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.contact .socialMediaContainer {
+  padding: 50px 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact .socialMediaContainer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+.contact .socialMediaContainer a p {
+  padding: 10px;
 }
 
 footer {

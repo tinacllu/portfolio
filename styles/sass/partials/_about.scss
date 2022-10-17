@@ -43,10 +43,12 @@
                 width: 40%;
                 border-radius: 50%;
                 overflow: hidden;
+                border: 5px solid $gray;
                 //filter: grayscale(100%);
-                border: 5px solid $lightPink;
                     img {
-                        transform: translateY(-40px);
+                        // transform: translateY(-40px);
+                        max-width: 100%;
+                        height: auto;
                     }
             }
             .textContainer {

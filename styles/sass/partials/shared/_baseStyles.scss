@@ -34,22 +34,6 @@ img {
     height: 500px;
 }
 
-.halfCircle {
-    // width: 200px;
-    // height: 100px; /*half the width*/
-    // background-color: pink;
-    // border-top-left-radius: 110px;  /* 100px of height + 10px of border */
-    // border-top-right-radius: 110px; /* 100px of height + 10px of border */
-    // border: 10px solid gray;
-    // border-bottom: 0;
-    width: 250px;
-    height: 250px;
-    border: 50px solid black;
-    border-bottom: 0;
-    border-left: 0;
-    border-radius: 0 300px 0 0;
-}
-
 .accentLine {
     background-color: $brightOrange;
     height: 5px;
@@ -72,14 +56,18 @@ input, textarea {
 a {
     color: black;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.3s;
     &:hover, &:focus {
         color: $brightOrange;
+        transform: scale(1.1);
     }
 }
 
-button {
-    all: unset;
+i {
+    &:hover, &:focus {
+        color: $brightOrange;
+        transform: scale(1.2);
+    }  
 }
 
 .sectionBg {

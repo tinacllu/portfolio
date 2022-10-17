@@ -3,7 +3,7 @@
 
 
 header {
-    z-index: 9;
+    max-width: 1800px;
 }
 
 .leftPanel {
@@ -14,7 +14,9 @@ header {
     flex-direction: column;
     justify-content: space-between;
     margin: 20px 0 0;
+    transform: translateX(-50px);
     .logo {
+        line-height: 26px;
         align-self: center;
         background-color: $brightOrange;
         border-radius: 50%;
@@ -43,8 +45,9 @@ header {
 
 .rightPanel {
     min-height: 100vh;
-    position: fixed;
-    right: 0;
+    position: sticky;
+    float: right;
+    // left: 1800px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,7 +62,7 @@ header {
         align-items: center;
     }
     .toTop {
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         i {
             color: $brightOrange;
             opacity: 50%;
