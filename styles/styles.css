@@ -286,14 +286,15 @@ body {
   max-width: 1800px;
   margin: 0 auto;
   overflow-x: hidden;
-  border: 5px solid red;
+}
+body .content {
+  background-color: white;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1400px;
   width: 90%;
-  min-width: calc(90% - 160px);
 }
 
 img {
@@ -358,9 +359,8 @@ i:hover, i:focus {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 100%;
-  height: 100%;
   z-index: -9;
+  display: none;
 }
 .sectionBg .circle {
   background-color: #fd5800;
@@ -382,6 +382,7 @@ i:hover, i:focus {
 
 header {
   max-width: 1800px;
+  z-index: 9;
 }
 
 .leftPanel {
@@ -399,8 +400,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 0 0;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 .leftPanel .logo {
   line-height: 26px;
@@ -478,49 +477,55 @@ header {
           align-items: center;
 }
 .rightPanel .toTop {
+  all: unset;
   margin-bottom: 100px;
 }
 .rightPanel .toTop i {
+  color: #fdaa7e;
+}
+.rightPanel .toTop i:hover, .rightPanel .toTop i:focus {
   color: #fd5800;
-  opacity: 50%;
 }
 
 .background {
-  position: relative;
-}
-.background .bgLayer1 {
+  z-index: -1;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  overflow: visible;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.background .bgLayer1 .mainImage {
-  width: 700px;
-  height: 700px;
-  -webkit-transform: translate(20%);
-          transform: translate(20%);
+.background .mainImage {
+  background-image: url("../assets/mainImage.jpg");
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-size: cover;
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
 }
-.background .bgLayer1 .bgImage {
-  opacity: 50%;
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
+.background .mainImage p {
+  font-size: 2.5rem;
+  color: #6a6a75;
+  -webkit-transform: translate(470px, 50px);
+          transform: translate(470px, 50px);
+}
+.background .bgImage {
+  background-image: url("../assets/umbrella.jpg");
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-size: cover;
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
   z-index: -9;
-  -webkit-transform: scale(3) translate(20%);
-          transform: scale(3) translate(20%);
 }
 .background .circleContainer {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,8 +535,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 40vh;
-  left: 40vw;
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
 }
 .background .circleContainer .circle {
   background-color: #fd5800;
@@ -549,8 +554,8 @@ header {
 
 .home {
   min-height: 100vh;
-  position: relative;
   padding: 0;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,7 +573,6 @@ header {
 .home .sectionText {
   padding: 10px 0;
   justify-self: flex-end;
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,14 +678,20 @@ header {
   -webkit-writing-mode: sideways-lr;
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
-  height: 45%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-self: flex-end;
+  padding-top: 100px;
 }
 .about .sectionHeader .lineContainer {
-  height: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .about .sectionHeader .lineContainer .accentLine {
   width: 5px;
-  height: clamp(300px, 40vh, 500px);
+  height: clamp(300px, 40vh, 600px);
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
 }
@@ -710,13 +720,24 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.about .sectionContent .aboutMe .imgContainer {
+.about .sectionContent .aboutMe .imgFlexContainer {
   width: 40%;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid #6a6a75;
 }
-.about .sectionContent .aboutMe .imgContainer img {
+.about .sectionContent .aboutMe .imgFlexContainer .image {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px 3px #151515;
+          box-shadow: 0 0 15px 3px #151515;
+  overflow: hidden;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about .sectionContent .aboutMe .imgFlexContainer img {
+  -webkit-transform: translate(10px, -40px);
+          transform: translate(10px, -40px);
   max-width: 100%;
   height: auto;
 }
@@ -728,7 +749,7 @@ header {
   margin: 20px 0;
 }
 .about .sectionContent .techStack {
-  width: 80%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -739,8 +760,22 @@ header {
           justify-content: space-between;
 }
 .about .sectionContent .techStack li {
-  margin: 50px;
+  width: 150px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+}
+.about .sectionContent .techStack li .devicon {
+  font-size: 2.5rem;
 }
 
 .projects {
@@ -751,6 +786,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .projects img {
   -webkit-filter: grayscale(100%);
@@ -855,8 +892,22 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.contact .images {
-  width: 40vw;
+.contact .imgFlexContainer {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact .imgFlexContainer img {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
 }
 .contact .sectionContent {
   display: -webkit-box;
@@ -870,7 +921,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   width: 60vw;
-  margin: 20px 20px 20px 100px;
+  margin: 20px 100px 20px 20px;
 }
 .contact form {
   display: -webkit-box;
@@ -918,8 +969,8 @@ header {
   background-color: white;
 }
 .contact form input:hover, .contact form input:focus, .contact form textarea:hover, .contact form textarea:focus {
-  -webkit-box-shadow: 5px 5px #dbdbdb;
-          box-shadow: 5px 5px #dbdbdb;
+  -webkit-box-shadow: 0 0 10px #6a6a75;
+          box-shadow: 0 0 10px #6a6a75;
 }
 .contact form button {
   all: unset;
@@ -941,15 +992,15 @@ header {
           transform: scale(1.05);
 }
 .contact .socialMediaContainer {
-  padding: 50px 0;
+  padding: 40px 0 0;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 40%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -966,10 +1017,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
 }
 .contact .socialMediaContainer a p {
-  padding: 10px;
+  margin: 0 20px;
 }
 
 footer {
@@ -984,11 +1034,13 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 60%;
+  padding: 25px 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 footer .accentLine {
+  background-color: #fdaa7e;
   width: 40%;
   border-radius: 5px;
 }

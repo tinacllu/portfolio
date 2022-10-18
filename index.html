@@ -6,19 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tina lu</title>
     <script src="https://kit.fontawesome.com/e9dfb007ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tina lu</title>
+    <script src="https://kit.fontawesome.com/e9dfb007ad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <header>
     <div class="leftPanel">
-        <div class="logo">tl</div>
+        <a href="#" class="logo">tl</a>
         <ul class="socialMediaContainer">
             <li class="listItem">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/tinacllu/"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <li class="listItem">
-                <a href="#"><i class="fa-brands fa-github"></i></a><!--  add placeholdertext/property where on mouse hover it says github -->
+                <a href="https://github.com/tinacllu"><i class="fa-brands fa-github"></i></a><!--  add placeholdertext/property where on mouse hover it says github -->
             </li>
             <li class="listItem">
                 <a href="#"><i class="fa-solid fa-envelope"></i></a>
@@ -44,7 +55,7 @@
             </li>
             <li>
                 <a href="#projects">
-                    <i class="fa-solid fa-folder-open"></i>
+                    <i class="fa-regular fa-folder-open"></i>
                     <p hidden>Projects</p>
                 </a>
             </li>
@@ -63,29 +74,28 @@
 
 <body>
     <main>
-        <section class="home" id="home">
-            <div class="background wrapper">
-                <div class="bgLayer1">
+        <section class="home wrapper" id="home">
+            <div class="background">
+                <!-- <div class="bgLayer1">
                     <div class="mainImage circle">
                         <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
-                    </div> <!-- mainImage-->
+                    </div> 
                     <div class="bgImage circle">
                         <img src="./assets/umbrella.jpg" alt="black and white image of a main standing on a rock in the water">
-                    </div> <!-- bgImage-->
-                </div> <!-- bgLayer1-->
+                    </div> 
+                </div> -->
+                <div class="mainImage">
+                    <p>hello, world!</p>
+                </div>
                 
                 <div class="bgLayer2 circleContainer">
                     <div class="circle large"></div>
                     <div class="circle small"></div>
                 </div> <!-- bgLayer2 circleContainer-->
+                <div class="bgImage"></div>
             </div> <!--background-->
-            <div class=" wrapper sectionText">
+            <div class="sectionText">
                 <h1>tina lu</h1>
-                <!--<div class="lineContainer">
-                    <div class="accentLine lineLeft"></div>
-                    <div class="accentLine lineRight"></div>
-                </div>-->
-                <p>hello, world!</p>
                 <div class="role">
                     <h2>front-end developer</h2>
                     <div class="swipe">
@@ -105,13 +115,14 @@
                 </div> <!-- role-->
             </div> <!-- sectionText-->
         </section> <!--home-->
-
+        <div class="content">
         <section class="wrapper about" id="about">
-            
             <div class="sectionContent">
                 <div class="aboutMe">
-                    <div class="imgContainer">
-                        <img src="./assets/headshot.jpg" alt="black and white headshot of tina">
+                    <div class="imgFlexContainer">
+                        <div class="image">
+                            <img src="./assets/headshot.jpg" alt="black and white headshot of tina">
+                        </div>
                     </div> <!-- imgContainer-->
                     <div class="textContainer">
                         <h3>hello!</h3>
@@ -136,7 +147,7 @@
                         <p>JavaScript</p>
                     </li>
                     <li>
-                        <!--insert jquery icon-->
+                        <i class="devicon devicon-jquery-plain"></i>
                         <p>jQuery</p>
                     </li>
                     <li>
@@ -152,8 +163,12 @@
                         <p>GitHub</p>
                     </li>
                     <li>
-                        <!-- insert image firebase logo-->
+                        <i class="devicon devicon-firebase-plain"></i>
                         <p>Firebase</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-up-right-and-down-left-from-center fa-2x"></i>
+                        <p>Responsive Design</p>
                     </li>
                 </ul> <!-- techStack-->
             </div> <!-- sectionContent-->
@@ -178,16 +193,16 @@
             <ul class="projectContainer">
                 <li class="project">
                     <div class="imgContainer">
-                        <img src="https://placekitten.com/400/400">
+                        <img src="./assets/ghibliProject.jpg">
                     </div> <!-- imgContainer-->
                     <div class="textContainer">
                         <h3>01</h3>
-                        <h4>Project Title</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate fuga excepturi eius laudantium, omnis natus dignissimos similique quisquam necessitatibus?</p>
-                        <p>HTML | CSS | SASS | JavaScript | API</p>
+                        <h4>Studio Ghibli Guide</h4>
+                        <p>Dive into the world of Studio Ghibli with this quick movie and character guide! Also includes a random movie generator to help you kick-start your next movie night.</p>
+                        <p>HTML | CSS | SASS | jQuery | API</p>
                         <div class="links">
                             <a href="https://www.google.ca"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/tinacllu/studio-ghibli-guide"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div> <!-- textContainer -->
                 </li>
@@ -197,12 +212,12 @@
                     </div> <!-- imgContainer-->
                     <div class="textContainer">
                         <h3>02</h3>
-                        <h4>Project Title</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corrupti fugiat corporis voluptatibus veritatis dolores facere magni! Ipsam, esse recusandae.</p>
-                        <p>HTML | CSS | SASS | JavaScript | API</p>
+                        <h4>Poetrivia</h4>
+                        <p>Test your knowledge of poetry with this fun poetry trivia game! Created together with the wonderful <a href="#">Britt Freitas.</a></p>
+                        <p>HTML | CSS | SASS | JavaScript | API | Pair Programming</p>
                         <div class="links">
                             <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/tinacllu/poetrivia"><i class="fa-brands fa-github"></i></a>
                     </div> <!-- textContainer -->
                 </li>
                 <li class="project">
@@ -216,18 +231,16 @@
                         <p>HTML | CSS | SASS | JavaScript | API</p>
                         <div class="links">
                             <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/tinacllu"><i class="fa-brands fa-github"></i></a>
                     </div> <!-- textContainer -->
                 </li>
             </ul> <!-- projectContainer -->
         </section> <!-- projects -->
 
         <section class="wrapper contact" id="contact">
-                <div class="mainImage circle">
-                    <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
-                </div> <!-- mainImage circle-->
+           
             <div class="sectionContent">
-                <h2>let's connect !</h2>
+                <h2>let's connect!</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur nobis labore, veritatis ab explicabo ea doloremque aspernatur veniam eligendi est!</p>
                 <form action="" method="POST">
                     <ul class="personalInfo">
@@ -252,15 +265,22 @@
                     </ul> <!-- messageContainer -->
                     <button class="submit">Say hello!</button>
                 </form>
+                
+            </div> <!-- sectionContent-->
+            
+            <div class="imgFlexContainer">
+                <div class="mainImage circle">
+                    <img src="./assets/mainImage.jpg" alt="black and white image of a woman and her shadwow dancing in front of a window">
+                </div> <!-- mainImage circle-->
                 <ul class="socialMediaContainer">
                     <li class="listItem">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/tinacllu/">
                             <i class="fa-brands fa-linkedin"></i>
                             <p>LinkedIn</p>
                         </a>
                     </li>
                     <li class="listItem">
-                        <a href="#">
+                        <a href="https://github.com/tinacllu">
                             <i class="fa-brands fa-github"></i>
                             <p>GitHub</p>
                         </a>
@@ -271,21 +291,21 @@
                             <p>Email</p>
                         </a>
                     </li>
-                    <li class="listItem">
-                        <div class="navLine"></div>
-                    </li>
                 </ul> <!--socialMediaContainer-->
-            </div> <!-- sectionContent-->
+            </div> <!--imgFlexContainer-->
+
             <div class="sectionBg">
                 <div class="circleOutline"></div>
                 <div class="circle"></div>
             </div> <!--sectionBg-->
         </section> <!-- contact -->
+
         <footer>
             <div class="accentLine lineLeft"></div>
             <p>tina lu © 2022</p>
             <div class="accentLine lineRight"></div>
         </footer>
+    </div>
     </main>
     <script src="./script.js"></script>
 </body>

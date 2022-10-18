@@ -18,13 +18,15 @@
         height: 100vh;
         h2 {
             writing-mode: sideways-lr;
-            height: 45%;
+            height: fit-content;
+            justify-self: flex-end;
+            padding-top: 100px;
         }
         .lineContainer {
-            height: 50%;
+            height: fit-content;
             .accentLine {
                 width: 5px;
-                height: clamp(300px, 40vh, 500px);
+                height: clamp(300px, 40vh, 600px);
                 transform: translateX(5px);
             }
         }
@@ -39,14 +41,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .imgContainer {
+            .imgFlexContainer {
                 width: 40%;
-                border-radius: 50%;
-                overflow: hidden;
-                border: 5px solid $gray;
                 //filter: grayscale(100%);
+                .image {
+                    border-radius: 50%;
+                    box-shadow: 0 0 15px 3px $darkGray;
+                    overflow: hidden;
+                    min-width: 400px;
+                    max-width: 400px;
+                    min-height: 400px;
+                    max-height: 400px;
+                    object-fit: contain;
+                }
                     img {
-                        // transform: translateY(-40px);
+                        transform: translate(10px, -40px);
                         max-width: 100%;
                         height: auto;
                     }
@@ -61,13 +70,21 @@
         }
 
         .techStack {
-            width: 80%;
+            width: 60%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             li {
-                margin: 50px;
+                width: 150px;
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
+                .devicon {
+                    font-size: 2.5rem;
+                }
+                
             }
         }
     }

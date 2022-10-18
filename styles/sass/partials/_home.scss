@@ -2,34 +2,43 @@
 @use "./shared/typography";
 
 .background {
-    position: relative;
-    .bgLayer1 {
-        display: flex;
-        flex-direction: row;
-        overflow: visible;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        .mainImage{
-            width: 700px;
-            height: 700px;
-            transform: translate(20%);
-        }
-        .bgImage {
-            opacity: 50%;
-            filter: brightness(130%);
-            z-index: -9;
-            transform: scale(3) translate(20%);
+    z-index: -1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mainImage {
+        background-image: url("../assets/mainImage.jpg");
+        // clip-path: circle(60px at center);
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-size: cover;
+        transform: translateX(500px);
+        p {
+            font-size: 2.5rem;
+            color: $gray;
+            transform: translate(470px, 50px);
         }
     }
 
+    .bgImage {
+        background-image: url("../assets/umbrella.jpg");
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background-size: cover;
+        transform: scale(1.6);
+        z-index: -9;
+    }
+
     .circleContainer {
-        position: absolute;
+        // position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-        top: 40vh;
-        left: 40vw;
+        transform: translateX(400px);
+
         .circle {
             background-color: $brightOrange;
             opacity: 50%;
@@ -48,10 +57,11 @@
 }
 
 .home {
+    
     min-height: 100vh;
-    position: relative;
+    // position: relative;
     padding: 0;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +69,7 @@
     .sectionText {
         padding: 10px 0;
         justify-self: flex-end;
-        position:absolute;
+        // position:absolute;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
