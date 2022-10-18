@@ -287,9 +287,6 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
-body .content {
-  background-color: white;
-}
 
 .wrapper {
   margin: 0 auto;
@@ -441,8 +438,8 @@ header {
 }
 
 .rightPanel {
+  text-align: right;
   min-height: 100vh;
-  position: sticky;
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,7 +486,7 @@ header {
 
 .background {
   z-index: -1;
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,7 +513,9 @@ header {
           transform: translate(470px, 50px);
 }
 .background .bgImage {
-  background-image: url("../assets/umbrella.jpg");
+  background-image: url("../assets/seagull.jpg");
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   width: 800px;
   height: 800px;
   border-radius: 50%;
@@ -655,7 +654,6 @@ header {
           align-items: center;
   width: 100%;
   padding: 100px 0 0;
-  position: relative;
 }
 .about .sectionHeader {
   display: -webkit-box;

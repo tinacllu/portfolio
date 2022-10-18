@@ -44,9 +44,10 @@ header {
 }
 
 .rightPanel {
+    text-align: right;
     min-height: 100vh;
-    position: sticky;
     float: right;
+    // position: fixed;
     // left: 1800px;
     display: flex;
     flex-direction: column;

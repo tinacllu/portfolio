@@ -3,7 +3,7 @@
 
 .background {
     z-index: -1;
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,8 @@
     }
 
     .bgImage {
-        background-image: url("../assets/umbrella.jpg");
+        background-image: url("../assets/seagull.jpg");
+        filter: grayscale(100%);
         width: 800px;
         height: 800px;
         border-radius: 50%;
