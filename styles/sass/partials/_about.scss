@@ -67,8 +67,10 @@
             .textContainer {
                 width: 60%;
                 margin: 30px;
+                padding-left: 50px;
                 @include largeTablet {
                     width: 90%;
+                    padding-left: 0;
                 }
                 p {
                     margin: 20px 0;
@@ -82,6 +84,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            pointer-events: none;
             @include desktop {
                 width: 80%;
             }

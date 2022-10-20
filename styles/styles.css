@@ -850,10 +850,12 @@ header {
 .about .sectionContent .aboutMe .textContainer {
   width: 60%;
   margin: 30px;
+  padding-left: 50px;
 }
 @media (max-width: 850px) {
   .about .sectionContent .aboutMe .textContainer {
     width: 90%;
+    padding-left: 0;
   }
 }
 .about .sectionContent .aboutMe .textContainer p {
@@ -870,6 +872,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  pointer-events: none;
 }
 @media (max-width: 1024px) {
   .about .sectionContent .techStack {
@@ -1076,29 +1079,36 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .contact .imgFlexContainer {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
 }
-.contact .imgFlexContainer img {
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+@media (min-width: 1800px) {
+  .contact .imgFlexContainer {
+    display: block;
+    width: 50%;
+    -webkit-clip-path: circle(40%);
+            clip-path: circle(40%);
+  }
+}
+@media (min-width: 1800px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .contact .sectionContent {
   display: -webkit-box;
@@ -1111,8 +1121,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60vw;
-  margin: 20px 100px 20px 20px;
+  width: 80%;
+  margin: 20px;
 }
 .contact form {
   display: -webkit-box;
@@ -1123,7 +1133,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  z-index: 999;
 }
 .contact form .personalInfo {
   display: -webkit-box;
@@ -1157,11 +1166,54 @@ header {
 .contact form input, .contact form textarea {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: white;
+  background-image: url("../assets/toronto.jpg");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: screen;
 }
 .contact form input:hover, .contact form input:focus, .contact form textarea:hover, .contact form textarea:focus {
   -webkit-box-shadow: 5px 5px #fdaa7e;
           box-shadow: 5px 5px #fdaa7e;
+}
+.contact form textarea {
+  background-position-y: -50px;
+}
+.contact form .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact form .socialMediaContainer {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact form .socialMediaContainer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact form .socialMediaContainer a p {
+  margin: 0 20px;
 }
 .contact form button {
   all: unset;
@@ -1181,36 +1233,6 @@ header {
   background-color: #fdaa7e;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-.contact .socialMediaContainer {
-  padding: 40px 0 0;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 40%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.contact .socialMediaContainer a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.contact .socialMediaContainer a p {
-  margin: 0 20px;
 }
 
 footer {

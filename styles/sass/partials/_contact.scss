@@ -1,32 +1,37 @@
 @use "./shared/variables" as *;
 @use "./shared/typography";
+@use "./shared/mixins" as *;
 
 .contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     .imgFlexContainer {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        img {
-            transform: translateY(-30px);
+        display: none;
+        @include largeDesktop {
+            display: block;
+            width: 50%;
+            clip-path: circle(40%);
         }
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include largeDesktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .sectionContent {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60vw;
-        margin: 20px 100px 20px 20px;
+        width: 80%;
+        margin: 20px;
     }
 
     form {
         display: flex;
         flex-direction: column;
         width: 100%;
-        z-index: 999;
         
         .personalInfo {
             display: flex; 
@@ -51,16 +56,44 @@
 
         input, textarea {
             transition: 0.3s;
-            background-color: white;
+            background-image: url("../assets/toronto.jpg");
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-blend-mode: screen;
+            
             &:hover, &:focus {
                 // box-shadow: 5px 5px $lightGray;
                 box-shadow: 5px 5px $medOrange;
             }
         }
 
+        textarea {
+            background-position-y: -50px;
+        }
+        
+        .buttonContainer {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .socialMediaContainer {
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    margin: 0 20px;
+                }
+            }
+        }
+
         button {
             all:unset;
-            // align-self: flex-end;
             background-color: $lightPink;
             color: $darkGray; 
             padding: 10px 20px;
@@ -73,23 +106,6 @@
             &:hover, &:focus {
                 background-color: $medOrange;
                 transform: scale(1.05);
-            }
-        }
-    }
-
-    .socialMediaContainer {
-        padding: 40px 0 0;
-        align-self: center;
-        display: flex;
-        justify-content: center;
-        width: 40%;
-        align-items: center;
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            p {
-                margin: 0 20px;
             }
         }
     }
