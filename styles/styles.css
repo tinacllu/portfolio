@@ -246,7 +246,7 @@ html {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: #151515;
   font-weight: normal;
   font-family: Jura, sans-serif;
@@ -259,18 +259,18 @@ h1 {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: clamp(3.5rem, 18vw, 5rem);
   color: black;
   margin: 20px 0;
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 15vw, 4rem);
   margin: 0;
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 8vw, 2rem);
   margin: 20px 0;
 }
 
@@ -440,7 +440,8 @@ header {
 .rightPanel {
   text-align: right;
   min-height: 100vh;
-  float: right;
+  right: 0;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,6 +457,11 @@ header {
           align-items: center;
   margin: 20px 0;
   width: 50px;
+}
+@media (min-width: 1800px) {
+  .rightPanel {
+    left: calc(1800px + (100vw - 1800px) / 2 - 5%);
+  }
 }
 .rightPanel .navIcons {
   display: -webkit-box;
@@ -475,7 +481,7 @@ header {
 }
 .rightPanel .toTop {
   all: unset;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .rightPanel .toTop i {
   color: #fdaa7e;
@@ -584,7 +590,11 @@ header {
   z-index: 1;
   width: 100%;
   height: 90vh;
-  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .home .sectionText {
+    color: red;
+  }
 }
 .home .sectionText h1 {
   -webkit-writing-mode: sideways-lr;
@@ -663,33 +673,43 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 10%;
   height: 100vh;
+  padding-right: 50px;
+}
+@media (max-width: 768px) {
+  .about .sectionHeader {
+    display: none;
+  }
 }
 .about .sectionHeader h2 {
   -webkit-writing-mode: sideways-lr;
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 50%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   justify-self: flex-end;
-  padding-top: 100px;
+  font-size: clamp(2rem, 12vh, 3.5rem);
+  text-align: left;
 }
 .about .sectionHeader .lineContainer {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  z-index: -1;
+  height: 50%;
 }
 .about .sectionHeader .lineContainer .accentLine {
   width: 5px;
-  height: clamp(300px, 40vh, 600px);
+  height: clamp(250px, 50vh, 700px);
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
 }
@@ -705,7 +725,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  padding: 50px;
+  padding: 50px 0px 50px 50px;
 }
 .about .sectionContent .aboutMe {
   display: -webkit-box;
@@ -718,35 +738,45 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 850px) {
+  .about .sectionContent .aboutMe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .about .sectionContent .aboutMe .imgFlexContainer {
   width: 40%;
-}
-.about .sectionContent .aboutMe .imgFlexContainer .image {
+  min-width: 180px;
+  min-height: 180px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 15px 3px #151515;
-          box-shadow: 0 0 15px 3px #151515;
+  -webkit-box-shadow: 0 0 10px 3px #fdaa7e;
+          box-shadow: 0 0 10px 3px #fdaa7e;
   overflow: hidden;
-  min-width: 400px;
-  max-width: 400px;
-  min-height: 400px;
-  max-height: 400px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.about .sectionContent .aboutMe .imgFlexContainer img {
-  -webkit-transform: translate(10px, -40px);
-          transform: translate(10px, -40px);
-  max-width: 100%;
-  height: auto;
+@media (max-width: 850px) {
+  .about .sectionContent .aboutMe .imgFlexContainer {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .about .sectionContent .aboutMe .textContainer {
   width: 60%;
-  margin: 60px;
+  margin: 30px;
+}
+@media (max-width: 850px) {
+  .about .sectionContent .aboutMe .textContainer {
+    width: 90%;
+  }
 }
 .about .sectionContent .aboutMe .textContainer p {
   margin: 20px 0;
 }
 .about .sectionContent .techStack {
+  margin: 20px 0;
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,8 +787,18 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1024px) {
+  .about .sectionContent .techStack {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .about .sectionContent .techStack {
+    width: 100%;
+  }
+}
 .about .sectionContent .techStack li {
-  width: 150px;
+  width: 25%;
   margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,8 +812,18 @@ header {
           align-items: center;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .about .sectionContent .techStack li {
+    width: 33%;
+  }
+}
 .about .sectionContent .techStack li .devicon {
   font-size: 2.5rem;
+}
+@media (max-width: 480px) {
+  .about .sectionContent .techStack li .devicon {
+    font-size: 2rem;
+  }
 }
 
 .projects {
@@ -786,6 +836,7 @@ header {
           flex-direction: column;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  padding: 50px 0;
 }
 .projects img {
   -webkit-filter: grayscale(100%);
@@ -830,6 +881,11 @@ header {
           align-items: center;
   width: 70%;
 }
+@media (max-width: 1024px) {
+  .projects .projectContainer {
+    width: 95%;
+  }
+}
 .projects .projectContainer .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -845,11 +901,42 @@ header {
   background-color: #ffe9e1;
   border-radius: 10px;
 }
+@media (max-width: 850px) {
+  .projects .projectContainer .project {
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .projects .projectContainer .project {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .projects .projectContainer .project {
+    width: 85%;
+    padding: 50px 20px;
+  }
+}
 .projects .projectContainer .project .imgContainer {
   border-radius: 50%;
   overflow: hidden;
   width: 40%;
   height: auto;
+}
+@media (max-width: 768px) {
+  .projects .projectContainer .project .imgContainer {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .projects .projectContainer .project .imgContainer {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 }
 .projects .projectContainer .project .textContainer {
   margin: 0 30px;
@@ -865,8 +952,21 @@ header {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+  .projects .projectContainer .project .textContainer {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .projects .projectContainer .project .textContainer {
+    margin: 0;
+  }
+}
 .projects .projectContainer .project .textContainer p {
   margin-bottom: 20px;
+}
+.projects .projectContainer .project .textContainer .skills {
+  color: #6a6a75;
 }
 .projects .projectContainer .project .textContainer .links {
   letter-spacing: 10px;
@@ -877,6 +977,14 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .projects .projectContainer li:nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contact {
@@ -967,8 +1075,8 @@ header {
   background-color: white;
 }
 .contact form input:hover, .contact form input:focus, .contact form textarea:hover, .contact form textarea:focus {
-  -webkit-box-shadow: 0 0 10px #6a6a75;
-          box-shadow: 0 0 10px #6a6a75;
+  -webkit-box-shadow: 5px 5px #fdaa7e;
+          box-shadow: 5px 5px #fdaa7e;
 }
 .contact form button {
   all: unset;

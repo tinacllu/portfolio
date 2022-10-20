@@ -1,5 +1,6 @@
 @use "./shared/variables" as *;
 @use "./shared/typography";
+@use "./shared/mixins" as *;
 
 .about {
     display: flex;
@@ -7,25 +8,32 @@
     align-items: center;
     width: 100%;
     padding: 100px 0 0;
-    // overflow: hidden;
     .sectionHeader {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 10%;
         height: 100vh;
+        padding-right: 50px;
+        @include tablet {
+            display: none;
+        }
         h2 {
             writing-mode: sideways-lr;
-            height: fit-content;
+            height: 50%;
+            min-height: fit-content;
             justify-self: flex-end;
-            padding-top: 100px;
+            font-size: clamp(2rem, 12vh, 3.5rem);
+            text-align: left;
         }
         .lineContainer {
-            height: fit-content;
+            min-height: fit-content;
+            z-index: -1;
+            height: 50%;
             .accentLine {
                 width: 5px;
-                height: clamp(300px, 40vh, 600px);
+                height: clamp(250px, 50vh, 700px);
                 transform: translateX(5px);
             }
         }
@@ -35,33 +43,33 @@
         flex-direction: column;
         align-items: center;
         width: 90%;
-        padding: 50px;
+        padding: 50px 0px 50px 50px;
         .aboutMe {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include largeTablet {
+                flex-direction: column;
+            }
             .imgFlexContainer {
                 width: 40%;
                 //filter: grayscale(100%);
-                .image {
-                    border-radius: 50%;
-                    box-shadow: 0 0 15px 3px $darkGray;
-                    overflow: hidden;
-                    min-width: 400px;
-                    max-width: 400px;
-                    min-height: 400px;
-                    max-height: 400px;
-                    object-fit: contain;
+                min-width: 180px;
+                min-height: 180px;
+                border-radius: 50%;
+                box-shadow: 0 0 10px 3px $medOrange;
+                overflow: hidden;
+                object-fit: cover;
+                @include largeTablet {
+                    align-self: center;
                 }
-                    img {
-                        transform: translate(10px, -40px);
-                        max-width: 100%;
-                        height: auto;
-                    }
             }
             .textContainer {
                 width: 60%;
-                margin: 60px;
+                margin: 30px;
+                @include largeTablet {
+                    width: 90%;
+                }
                 p {
                     margin: 20px 0;
                 }
@@ -69,21 +77,33 @@
         }
 
         .techStack {
+            margin: 20px 0;
             width: 60%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            @include desktop {
+                width: 80%;
+            }
+            @include mobile {
+                width: 100%;
+            }
             li {
-                width: 150px;
+                width: 25%;
                 margin-bottom: 50px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                @include desktop {
+                    width: 33%;
+                }
                 .devicon {
                     font-size: 2.5rem;
+                    @include mobile {
+                        font-size: 2rem;
+                    }
                 }
-                
             }
         }
     }

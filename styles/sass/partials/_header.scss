@@ -1,5 +1,6 @@
 @use "./shared/variables" as *;
 @use "./shared/typography";
+@use "./shared/mixins" as *;
 
 
 header {
@@ -46,15 +47,17 @@ header {
 .rightPanel {
     text-align: right;
     min-height: 100vh;
-    float: right;
-    // position: fixed;
-    // left: 1800px;
+    right: 0;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
     width: 50px;
+    @include largeDesktop {
+        left: calc(1800px + ((100vw - 1800px) / 2 - 5%))
+    }
     .navIcons {
         display: flex;
         flex-direction: column;
@@ -64,7 +67,7 @@ header {
     }
     .toTop {
         all:unset;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         
         i {
             color: $medOrange;
