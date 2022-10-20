@@ -8,19 +8,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include desktop {
+        transform: scale(0.9) translateX(50px);
+    }
+
+    @include tablet {
+        transform: scale(0.75); 
+    }
     
     .mainImage {
         background-image: url("../assets/mainImage.jpg");
-        // clip-path: circle(60px at center);
         width: 500px;
         height: 500px;
         border-radius: 50%;
         background-size: cover;
-        transform: translateX(500px);
+        transform: translateX(550px);
+        @include tablet {
+            transform: translateX(500px);
+        }
         p {
             font-size: 2.5rem;
             color: $gray;
             transform: translate(470px, 50px);
+            @include tablet {
+                display: none;
+            }
         }
     }
 
@@ -33,6 +45,9 @@
         background-size: cover;
         transform: scale(1.6);
         z-index: -9;
+        @include tablet {
+            transform: scale(1.5);
+        }
     }
 
     .circleContainer {
@@ -40,20 +55,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translateX(400px);
-
+        transform: translateX(450px);
+        @include mobile {
+            transform: translateX(380px);
+        }
         .circle {
             background-color: $brightOrange;
             opacity: 50%;
             &.small {
                 height: 100px;
                 width: 100px;
-                
             }
             &.large {
                 height: 250px;
                 width: 250px;
                 margin-right: 100px;
+                @include desktop {
+                    margin-right: 60px;
+                }
             }
         }
     }
@@ -64,7 +83,7 @@
     min-height: 100vh;
     // position: relative;
     padding: 0;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,23 +98,26 @@
         width: 100%;
         height: 90vh;
         @include tablet {
-            color: red;
+            flex-direction: column;
         }
+
         h1 {
             writing-mode: sideways-lr;
+            min-height: 450px;
+            @include tablet {
+                padding-right: 20px;
+                text-align: right;
+            }
+            @include mobile {
+                padding-right: 0;
+            }
         }
         h2 {
-            font-size: calc(4 * $baseFontSize);
+            font-size: clamp(calc(3 * $baseFontSize), 5vw, calc(4 * $baseFontSize));
         }
         h3 {
-            font-size: calc(3 * $baseFontSize);
+            font-size: clamp(calc(2 * $baseFontSize), 3.75vw, calc(3 * $baseFontSize));
         }
-        p {
-            font-size: calc(2 * $baseFontSize);
-            writing-mode: sideways-lr;
-            align-self: flex-start;
-        }
-         
     }
     .role {
         display: flex;
@@ -104,12 +126,28 @@
         align-items: flex-end;
         text-align: center;
         width: 350px;
+        @include tablet {
+            text-align: right;
+            text-align: left;
+            align-self: flex-start;
+            padding-left: 20px;
+        }
+        // @include mobile {
+        //     text-align: left;
+        //     align-self: flex-start;
+        // }
         .swipe {
             display: flex;
             flex-direction: row;
             width: 100%;
             align-items: flex-start;
             justify-content: center;
+            @include tablet {
+                justify-content: flex-end;
+            }
+            @include mobile {
+                justify-content: flex-start;
+            }
             .otherRoles {
                 padding-left: 20px;
             }

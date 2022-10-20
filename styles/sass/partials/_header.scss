@@ -8,6 +8,11 @@ header {
     z-index: 9;
 }
 
+.menu {
+    position: fixed;
+    padding: 20px;
+}
+
 .leftPanel {
     min-height: 100vh;
     width: 50px;
@@ -16,6 +21,9 @@ header {
     flex-direction: column;
     justify-content: space-between;
     margin: 20px 0 0;
+    @include mobile {
+        display: none;
+    }
     .logo {
         line-height: 26px;
         align-self: center;
@@ -58,6 +66,9 @@ header {
     @include largeDesktop {
         left: calc(1800px + ((100vw - 1800px) / 2 - 5%))
     }
+    @include mobile {
+        display: none;
+    }
     .navIcons {
         display: flex;
         flex-direction: column;
@@ -68,7 +79,8 @@ header {
     .toTop {
         all:unset;
         margin-bottom: 50px;
-        
+        // padding-right: 10px;
+        justify-self: center;
         i {
             color: $medOrange;
             &:hover, &:focus {

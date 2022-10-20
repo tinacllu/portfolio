@@ -38,8 +38,7 @@ body {
 }
 
 h1 {
-    font-size: 10vw;
-    font-size: clamp(calc(6 * $baseFontSize), 10vw, calc(10 * $baseFontSize));
+    font-size: clamp(calc(7 * $baseFontSize), 12vw, calc(11 * $baseFontSize));
     margin: 0;
 }
 

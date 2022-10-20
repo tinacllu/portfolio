@@ -253,8 +253,7 @@ body {
 }
 
 h1 {
-  font-size: 10vw;
-  font-size: clamp(6rem, 10vw, 10rem);
+  font-size: clamp(7rem, 12vw, 11rem);
   margin: 0;
 }
 
@@ -382,6 +381,11 @@ header {
   z-index: 9;
 }
 
+.menu {
+  position: fixed;
+  padding: 20px;
+}
+
 .leftPanel {
   min-height: 100vh;
   width: 50px;
@@ -397,6 +401,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 0 0;
+}
+@media (max-width: 480px) {
+  .leftPanel {
+    display: none;
+  }
 }
 .leftPanel .logo {
   line-height: 26px;
@@ -463,6 +472,11 @@ header {
     left: calc(1800px + (100vw - 1800px) / 2 - 5%);
   }
 }
+@media (max-width: 480px) {
+  .rightPanel {
+    display: none;
+  }
+}
 .rightPanel .navIcons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,6 +496,7 @@ header {
 .rightPanel .toTop {
   all: unset;
   margin-bottom: 50px;
+  justify-self: center;
 }
 .rightPanel .toTop i {
   color: #fdaa7e;
@@ -503,20 +518,43 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 1024px) {
+  .background {
+    -webkit-transform: scale(0.9) translateX(50px);
+            transform: scale(0.9) translateX(50px);
+  }
+}
+@media (max-width: 768px) {
+  .background {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+}
 .background .mainImage {
   background-image: url("../assets/mainImage.jpg");
   width: 500px;
   height: 500px;
   border-radius: 50%;
   background-size: cover;
-  -webkit-transform: translateX(500px);
-          transform: translateX(500px);
+  -webkit-transform: translateX(550px);
+          transform: translateX(550px);
+}
+@media (max-width: 768px) {
+  .background .mainImage {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
 }
 .background .mainImage p {
   font-size: 2.5rem;
   color: #6a6a75;
   -webkit-transform: translate(470px, 50px);
           transform: translate(470px, 50px);
+}
+@media (max-width: 768px) {
+  .background .mainImage p {
+    display: none;
+  }
 }
 .background .bgImage {
   background-image: url("../assets/seagull.jpg");
@@ -530,6 +568,12 @@ header {
           transform: scale(1.6);
   z-index: -9;
 }
+@media (max-width: 768px) {
+  .background .bgImage {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
 .background .circleContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,8 +584,14 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateX(400px);
-          transform: translateX(400px);
+  -webkit-transform: translateX(450px);
+          transform: translateX(450px);
+}
+@media (max-width: 480px) {
+  .background .circleContainer {
+    -webkit-transform: translateX(380px);
+            transform: translateX(380px);
+  }
 }
 .background .circleContainer .circle {
   background-color: #fd5800;
@@ -556,11 +606,15 @@ header {
   width: 250px;
   margin-right: 100px;
 }
+@media (max-width: 1024px) {
+  .background .circleContainer .circle.large {
+    margin-right: 60px;
+  }
+}
 
 .home {
   min-height: 100vh;
   padding: 0;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,27 +647,34 @@ header {
 }
 @media (max-width: 768px) {
   .home .sectionText {
-    color: red;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .home .sectionText h1 {
   -webkit-writing-mode: sideways-lr;
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
+  min-height: 450px;
+}
+@media (max-width: 768px) {
+  .home .sectionText h1 {
+    padding-right: 20px;
+    text-align: right;
+  }
+}
+@media (max-width: 480px) {
+  .home .sectionText h1 {
+    padding-right: 0;
+  }
 }
 .home .sectionText h2 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 5vw, 4rem);
 }
 .home .sectionText h3 {
-  font-size: 3rem;
-}
-.home .sectionText p {
-  font-size: 2rem;
-  -webkit-writing-mode: sideways-lr;
-      -ms-writing-mode: sideways-lr;
-          writing-mode: sideways-lr;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  font-size: clamp(2rem, 3.75vw, 3rem);
 }
 .home .role {
   display: -webkit-box;
@@ -632,6 +693,15 @@ header {
   text-align: center;
   width: 350px;
 }
+@media (max-width: 768px) {
+  .home .role {
+    text-align: right;
+    text-align: left;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 20px;
+  }
+}
 .home .role .swipe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,6 +717,20 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 768px) {
+  .home .role .swipe {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+@media (max-width: 480px) {
+  .home .role .swipe {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .home .role .swipe .otherRoles {
   padding-left: 20px;
@@ -673,15 +757,15 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 10%;
   height: 100vh;
-  padding-right: 50px;
+  padding-right: 80px;
 }
 @media (max-width: 768px) {
   .about .sectionHeader {
@@ -725,7 +809,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  padding: 50px 0px 50px 50px;
+  padding: 50px 0px 0px 50px;
 }
 .about .sectionContent .aboutMe {
   display: -webkit-box;
@@ -776,7 +860,7 @@ header {
   margin: 20px 0;
 }
 .about .sectionContent .techStack {
-  margin: 20px 0;
+  margin: 80px 0;
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -795,6 +879,7 @@ header {
 @media (max-width: 480px) {
   .about .sectionContent .techStack {
     width: 100%;
+    margin: 20px 0 0;
   }
 }
 .about .sectionContent .techStack li {
@@ -1156,4 +1241,5 @@ footer p {
   min-width: -moz-fit-content;
   min-width: fit-content;
   text-align: center;
+  padding: 0 20px;
 }
