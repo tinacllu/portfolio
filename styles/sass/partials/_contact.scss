@@ -4,20 +4,22 @@
 
 .contact {
     .imgFlexContainer {
-        display: none;
-        @include largeDesktop {
-            display: block;
-            width: 50%;
-            clip-path: circle(40%);
+        display: block;
+        width: 50%;
+        clip-path: circle(40%);
+        @include midDesktop {
+            display: none;
         }
     }
 
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    @include largeDesktop {
-        display: flex;
         justify-content: space-between;
+        align-items: center;
+    
+    @include midDesktop {
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
     .sectionContent {
@@ -32,17 +34,23 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        
         .personalInfo {
             display: flex; 
             width: calc(100% - 20px);
             justify-content: space-between;
+            @include tablet {
+                flex-direction: column;
+            }
             li {
                 width: 45%;
+                @include tablet {
+                    width: 100%;
+                }
                 input {
                     width: 100%;
                 }
             }
+            
         }
         .messageContainer {
             display: flex;
@@ -60,7 +68,9 @@
             background-size: cover;
             background-color: rgba(255, 255, 255, 0.5);
             background-blend-mode: screen;
-            
+            &::placeholder {
+                color: black;
+            }
             &:hover, &:focus {
                 // box-shadow: 5px 5px $lightGray;
                 box-shadow: 5px 5px $medOrange;
@@ -69,12 +79,18 @@
 
         textarea {
             background-position-y: -50px;
+            @include tablet {
+                background-position-y: 0px;
+            }
         }
         
         .buttonContainer {
             display: flex;
             width: 100%;
             justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+            }
         }
 
         .socialMediaContainer {
@@ -89,6 +105,10 @@
                 p {
                     margin: 0 20px;
                 }
+            }
+
+            @include mobile {
+                padding-top: 50px;
             }
         }
 

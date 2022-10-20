@@ -12,6 +12,12 @@
     }
 }
 
+@mixin midDesktop {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (max-width: 1024px) {
     @content;

@@ -1079,32 +1079,32 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .contact .imgFlexContainer {
-  display: none;
+  display: block;
+  width: 50%;
+  -webkit-clip-path: circle(40%);
+          clip-path: circle(40%);
 }
-@media (min-width: 1800px) {
+@media (max-width: 1100px) {
   .contact .imgFlexContainer {
-    display: block;
-    width: 50%;
-    -webkit-clip-path: circle(40%);
-            clip-path: circle(40%);
+    display: none;
   }
 }
-@media (min-width: 1800px) {
+@media (max-width: 1100px) {
   .contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1143,8 +1143,21 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .contact form .personalInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .contact form .personalInfo li {
   width: 45%;
+}
+@media (max-width: 768px) {
+  .contact form .personalInfo li {
+    width: 100%;
+  }
 }
 .contact form .personalInfo li input {
   width: 100%;
@@ -1171,12 +1184,32 @@ header {
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: screen;
 }
+.contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
+  color: black;
+}
+.contact form input::-moz-placeholder, .contact form textarea::-moz-placeholder {
+  color: black;
+}
+.contact form input:-ms-input-placeholder, .contact form textarea:-ms-input-placeholder {
+  color: black;
+}
+.contact form input::-ms-input-placeholder, .contact form textarea::-ms-input-placeholder {
+  color: black;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  color: black;
+}
 .contact form input:hover, .contact form input:focus, .contact form textarea:hover, .contact form textarea:focus {
   -webkit-box-shadow: 5px 5px #fdaa7e;
           box-shadow: 5px 5px #fdaa7e;
 }
 .contact form textarea {
   background-position-y: -50px;
+}
+@media (max-width: 768px) {
+  .contact form textarea {
+    background-position-y: 0px;
+  }
 }
 .contact form .buttonContainer {
   display: -webkit-box;
@@ -1186,6 +1219,14 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .contact form .buttonContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .contact form .socialMediaContainer {
   -ms-flex-item-align: center;
@@ -1214,6 +1255,11 @@ header {
 }
 .contact form .socialMediaContainer a p {
   margin: 0 20px;
+}
+@media (max-width: 480px) {
+  .contact form .socialMediaContainer {
+    padding-top: 50px;
+  }
 }
 .contact form button {
   all: unset;
