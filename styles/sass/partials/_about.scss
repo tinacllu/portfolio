@@ -1,5 +1,4 @@
 @use "./shared/variables" as *;
-@use "./shared/typography";
 @use "./shared/mixins" as *;
 
 .about {
@@ -11,6 +10,7 @@
     @include mobile {
         justify-content: center;
     }
+
     .sectionHeader {
         display: flex;
         flex-direction: column;
@@ -25,6 +25,7 @@
         @include vertical {
             display: none;
         }
+
         h2 {
             writing-mode: vertical-rl;
             transform: rotate(180deg);
@@ -34,6 +35,7 @@
             font-size: clamp(2rem, 12vh, 3.5rem);
             text-align: left;
         }
+
         .lineContainer {
             min-height: fit-content;
             z-index: -1;
@@ -45,6 +47,7 @@
             }
         }
     }
+
     .sectionContent {
         display: flex;
         flex-direction: column;
@@ -52,9 +55,9 @@
         width: 90%;
         padding: 50px 0px 0px 50px;
         @include mobile {
-            // width: 100%;
             padding: 50px 0px;
         }
+
         .aboutMe {
             display: flex;
             justify-content: space-between;
@@ -64,7 +67,6 @@
             }
             .imgFlexContainer {
                 width: 40%;
-                //filter: grayscale(100%);
                 min-width: 180px;
                 min-height: 180px;
                 border-radius: 50%;
@@ -74,7 +76,11 @@
                 @include largeTablet {
                     align-self: center;
                 }
+                img {
+                    filter: grayscale(100%);
+                }
             }
+
             .textContainer {
                 width: 60%;
                 margin: 30px;
@@ -103,6 +109,7 @@
                 width: 100%;
                 margin: 20px 0 0;
             }
+            
             li {
                 width: 25%;
                 margin-bottom: 50px;

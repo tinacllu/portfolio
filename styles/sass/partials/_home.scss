@@ -8,15 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // height: 100%;
     min-height: 100vh;
-    // overflow: hidden;
     overflow-y: visible;
     overflow-x: clip;
     @include desktop {
         transform: translateX(50px);
     }
-
     @include tablet {
         transform: translateX(-50px); 
     }
@@ -42,10 +39,6 @@
         p {
             font-size: 2.5rem;
             color: $gray;
-            // color: black;
-            // mix-blend-mode: difference;
-            // filter: invert(1);
-            // transform: translate(250px, 250px);
             transform: translate(470px, 50px);
             @include tablet {
                 display: none;
@@ -72,7 +65,6 @@
     }
 
     .circleContainer {
-        // position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,7 +95,6 @@
     height: 100vh;
     width: 100vw;
     max-width: 1800px;
-    // position: relative;
     padding: 0;    
     display: flex;
     flex-direction: column;
@@ -116,32 +107,18 @@
         justify-content: space-between;
         align-items: flex-end;
         z-index: 1;
-        // width: 100%;
         height: 90vh;
         @include tablet {
             flex-direction: column;
             align-items: flex-start;
         }
 
-
         h1 {
             writing-mode: vertical-rl;
             transform: rotate(180deg);
-            // min-height: 450px;
             color: black;
             text-align: left;
-            // mix-blend-mode: screen;
             text-shadow: -1px -1px 0 $medOrange, 1px -1px 0 $medOrange, -1px 1px 0 $medOrange, 1px 1px 0 $medOrange;
-            @include tablet {
-
-                // padding-right: 20px;
-                // text-align: right;
-                // writing-mode: horizontal-tb;
-                // transform: rotate(0deg);
-            }
-            // @include mobile {
-            //     padding-right: 0;
-            // }
         }
         h2 {
             font-size: clamp(calc(3 * $baseFontSize), 5vw, calc(4 * $baseFontSize));
@@ -152,6 +129,7 @@
             text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
         }
     }
+
     .role {
         display: flex;
         flex-direction: column;
@@ -160,9 +138,7 @@
         text-align: center;
         width: 300px;
         @include tablet {
-            // text-align: left;
             align-self: flex-end;
-            // padding-left: 20px;
         }
 
         .swipe {
@@ -176,19 +152,10 @@
             @include desktop {
                 width: 250px;
             }
-            // padding-left: 20px;
-            // @include tablet {
-            //     // justify-content: flex-start;
-            //     padding-left: 20px;
-            // }
-            // @include mobile {
-            //     justify-content: flex-start;
-            // }
+            
             .otherRoles {
                 padding-left: 20px;
                 max-height: 50px;
-                // width: 350px;
-                // overflow-y: clip;
             }
         }
     }

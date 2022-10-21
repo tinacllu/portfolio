@@ -1,7 +1,5 @@
 @use "./shared/variables" as *;
-@use "./shared/typography";
 @use "./shared/mixins" as *;
-
 
 header {
     max-width: 1800px;
@@ -10,13 +8,14 @@ header {
 
 .menu {
     display: none;
-    // position: fixed;
+    position: absolute;
     z-index: 9;
     padding: 20px;
     @include mobile {
         display: block;
     }
 }
+
 .navigation {
     z-index: 9;
     padding: 20px;
@@ -27,12 +26,10 @@ header {
     height: 100vh;
     width: 50vw;
     transform: translateX(-100%) ;
-    // display: none;
     li {
         padding: 10px 0;
     }
 }
-
 
 .leftPanel {
     min-height: 100vh;
@@ -45,6 +42,7 @@ header {
     @include mobile {
         display: none;
     }
+
     .logo {
         line-height: 26px;
         align-self: center;
@@ -55,6 +53,7 @@ header {
         color: white;
         text-align: center;
     }
+
     .socialMediaContainer {
         display: flex;
         flex-direction: column;
@@ -96,6 +95,7 @@ header {
     @include vertical {
         display: none;
     }
+
     .navIcons {
         display: flex;
         flex-direction: column;
@@ -103,10 +103,10 @@ header {
         justify-content: space-between;
         align-items: center;
     }
+
     .toTop {
         all:unset;
         margin-bottom: 50px;
-        // padding-right: 10px;
         justify-self: center;
         i {
             color: $medOrange;
@@ -114,6 +114,5 @@ header {
                 color: $brightOrange;
             }
         }
-        
     }
 }

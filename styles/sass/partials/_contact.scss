@@ -1,10 +1,17 @@
 @use "./shared/variables" as *;
-@use "./shared/typography";
 @use "./shared/mixins" as *;
 
 .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include midDesktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .imgFlexContainer {
-        // display: block;
         width: 50%;
         clip-path: circle(40%);
         @include midDesktop {
@@ -12,15 +19,6 @@
         }
     }
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    @include midDesktop {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .sectionContent {
         display: flex;
         flex-direction: column;
@@ -69,20 +67,20 @@
 
         input, textarea {
             transition: 0.3s;
-            background-image: url("../assets/toronto.jpg");
-            background-size: cover;
-            background-color: rgba(255, 255, 255, 0.5);
-            background-blend-mode: screen;
+            background-color: $lightGray;
             &::placeholder {
                 color: black;
             }
             &:hover, &:focus {
-                // box-shadow: 5px 5px $lightGray;
                 box-shadow: 5px 5px $medOrange;
             }
         }
 
         textarea {
+            background-image: url("../assets/toronto.jpg");
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-blend-mode: screen;
             background-position-y: -50px;
             @include tablet {
                 background-position-y: 0px;

@@ -27,17 +27,17 @@
 }
 .one {
     border-radius: 50%;
-    background: $brightOrange;
+    background: white;
     opacity: .0;
     animation: loading 1.3s .65s infinite;
     height: 30px;
     width: 30px;
   }
   
-  .two {
+.two {
     position: fixed;
     border-radius: 50%;
-    background: white;
+    background: $brightOrange;
     opacity: .0;
     animation: loading 1.3s infinite;
     height: 30px;

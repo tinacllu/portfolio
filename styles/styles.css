@@ -222,16 +222,6 @@ template {
 }
 
 @font-face {
-  font-family: "Khand";
-  src: url(../fonts/Khand/Khand-Regular.ttf);
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Khand";
-  src: url(../fonts/Khand/Khand-Bold.ttf);
-  font-weight: bold;
-}
-@font-face {
   font-family: "Jura";
   src: url(../fonts/Jura/static/Jura-Regular.ttf);
   font-weight: normal;
@@ -376,6 +366,7 @@ header {
 
 .menu {
   display: none;
+  position: absolute;
   z-index: 9;
   padding: 20px;
 }
@@ -908,6 +899,10 @@ header {
         align-self: center;
   }
 }
+.about .sectionContent .aboutMe .imgFlexContainer img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
 .about .sectionContent .aboutMe .textContainer {
   width: 60%;
   margin: 30px;
@@ -1160,16 +1155,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.contact .imgFlexContainer {
-  width: 50%;
-  -webkit-clip-path: circle(40%);
-          clip-path: circle(40%);
-}
-@media (max-width: 1100px) {
-  .contact .imgFlexContainer {
-    display: none;
-  }
-}
 @media (max-width: 1100px) {
   .contact {
     display: -webkit-box;
@@ -1181,6 +1166,16 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+.contact .imgFlexContainer {
+  width: 50%;
+  -webkit-clip-path: circle(40%);
+          clip-path: circle(40%);
+}
+@media (max-width: 1100px) {
+  .contact .imgFlexContainer {
+    display: none;
   }
 }
 .contact .sectionContent {
@@ -1262,10 +1257,7 @@ header {
 .contact form input, .contact form textarea {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: url("../assets/toronto.jpg");
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-blend-mode: screen;
+  background-color: #dbdbdb;
 }
 .contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
   color: black;
@@ -1287,6 +1279,10 @@ header {
           box-shadow: 5px 5px #fdaa7e;
 }
 .contact form textarea {
+  background-image: url("../assets/toronto.jpg");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: screen;
   background-position-y: -50px;
 }
 @media (max-width: 768px) {
@@ -1514,7 +1510,7 @@ footer p {
 
 .one {
   border-radius: 50%;
-  background: #fd5800;
+  background: white;
   opacity: 0;
   -webkit-animation: loading 1.3s 0.65s infinite;
           animation: loading 1.3s 0.65s infinite;
@@ -1525,7 +1521,7 @@ footer p {
 .two {
   position: fixed;
   border-radius: 50%;
-  background: white;
+  background: #fd5800;
   opacity: 0;
   -webkit-animation: loading 1.3s infinite;
           animation: loading 1.3s infinite;
