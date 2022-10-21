@@ -73,13 +73,15 @@ button {
 }
 
 a {
-    color: black;
+    color: $darkGray;
     text-decoration: none;
     transition: 0.3s;
+    cursor: pointer;
     &:hover, &:focus {
         color: $brightOrange;
         transform: scale(1.1);
         text-decoration: underline;
+        
     }
 }
 
@@ -88,29 +90,4 @@ i {
         color: $brightOrange;
         transform: scale(1.2);
     }  
-}
-
-.sectionBg {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    // width: 100%;
-    // height: 100%;
-    z-index: -9;
-    display: none;
-    .circle {
-        background-color: $brightOrange;
-        opacity: 50%;
-        transform: translate(10vw, 10vh);
-    }
-    .circleOutline {
-        border: 50px solid $brightOrange;
-        opacity: 50%;
-        border-radius: 50%;
-        align-self: flex-start;
-        width: 600px;
-        height: 600px;
-        transform: translate(-15vw, -20vh);
-    }
 }

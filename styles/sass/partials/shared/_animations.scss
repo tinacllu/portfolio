@@ -1,0 +1,14 @@
+.navigation {
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: -100%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }

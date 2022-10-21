@@ -259,7 +259,6 @@ h1 {
 
 h2 {
   font-size: clamp(3.5rem, 18vw, 5rem);
-  color: black;
   margin: 20px 0;
 }
 
@@ -351,10 +350,11 @@ button:hover, button:focus {
 }
 
 a {
-  color: black;
+  color: #151515;
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 a:hover, a:focus {
   color: #fd5800;
@@ -367,38 +367,6 @@ i:hover, i:focus {
   color: #fd5800;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-.sectionBg {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  z-index: -9;
-  display: none;
-}
-.sectionBg .circle {
-  background-color: #fd5800;
-  opacity: 50%;
-  -webkit-transform: translate(10vw, 10vh);
-          transform: translate(10vw, 10vh);
-}
-.sectionBg .circleOutline {
-  border: 50px solid #fd5800;
-  opacity: 50%;
-  border-radius: 50%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  width: 600px;
-  height: 600px;
-  -webkit-transform: translate(-15vw, -20vh);
-          transform: translate(-15vw, -20vh);
 }
 
 header {
@@ -495,7 +463,7 @@ header {
 .leftPanel .socialMediaContainer .navLine {
   height: clamp(100px, 25vh, 500px);
   width: 3px;
-  background-color: black;
+  background-color: #151515;
 }
 @media (max-height: 450px) {
   .leftPanel .socialMediaContainer {
@@ -1424,4 +1392,29 @@ footer p {
   min-width: fit-content;
   text-align: center;
   padding: 0 20px;
+}
+
+.navigation {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }

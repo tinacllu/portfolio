@@ -26,6 +26,7 @@ header {
     flex-direction: column;
     height: 100vh;
     width: 50vw;
+    
     display: none;
     li {
         padding: 10px 0;
@@ -67,7 +68,7 @@ header {
         .navLine {
             height: clamp(100px, 25vh, 500px);
             width: 3px;
-            background-color: black;
+            background-color: $darkGray;
         }
         @include vertical {
             display: none;
