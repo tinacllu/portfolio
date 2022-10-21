@@ -47,3 +47,9 @@
     @content;
   }
 }
+
+@mixin vertical {
+  @media (max-height: 450px) {
+    @content; 
+  }
+}

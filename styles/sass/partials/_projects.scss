@@ -23,6 +23,11 @@
             width: 150px;
             margin: 20px 0;
         }
+        @include mobile {
+            width: 95%;
+            margin: 0;
+            align-self: center;
+        }
     }
     .projectContainer {
         margin: 0 auto;
@@ -33,6 +38,9 @@
         width: 70%;
         @include desktop {
             width: 95%;
+        }
+        @include mobile {
+            width: 100%;
         }
         .project {
             display: flex;
@@ -50,7 +58,7 @@
                 flex-direction: column;
             }
             @include mobile {
-                width: 85%;
+                width: 95%;
                 padding: 50px 20px;
             }
             .imgContainer {

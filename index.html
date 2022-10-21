@@ -11,20 +11,31 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tina lu</title>
-    <script src="https://kit.fontawesome.com/e9dfb007ad.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-
 <header>
-    <div class="menu" hidden>
+    <div class="menu">
         <i class="fa-solid fa-bars fa-2x"></i>
     </div>
+    <ul class="navigation">
+        <li>
+            <i class="fa-solid fa-x fa-2x" id="x"></i>
+        </li>
+        <li>
+            <a href="#home">01. home</a>
+        </li>
+        <li>
+            <a href="#about">02. about</a>
+        </li>
+        <li>
+            <a href="#projects">03. projects</a>
+        </li>
+        <li>
+            <a href="#content">04. contact</a>
+        </li>
+        <li>
+            <button>resume</button>
+        </li>
+    </ul>
+
     <div class="leftPanel">
         <a href="#" class="logo">tl</a>
         <ul class="socialMediaContainer">
@@ -35,7 +46,7 @@
                 <a href="https://github.com/tinacllu"><i class="fa-brands fa-github"></i></a><!--  add placeholdertext/property where on mouse hover it says github -->
             </li>
             <li class="listItem">
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:tina.lu0107@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </li>
             <li class="listItem">
                 <div class="navLine"></div>
@@ -69,9 +80,9 @@
                 </a>
             </li>
         </ul>
-        <button class="toTop">
+        <a href="#home" class="toTop">
             <i class="fa-solid fa-circle-chevron-up fa-2x"></i>
-        </button>
+        </a>
     </nav>
 </header> 
 
@@ -79,16 +90,23 @@
     <main>
         <section class="home wrapper" id="home">
             <div class="background">
+                <!-- <div class="mainImage"></div>
+                <div class="bgImage"></div>
+                <div class="circleContainer">
+                    <div class="circle large"></div>
+                    <div class="circle small"></div>
+                </div> -->
                 <div class="mainImage">
                     <p>hello, world!</p>
                 </div>
-                <div class="bgLayer2 circleContainer">
+                <div class="circleContainer">
                     <div class="circle large"></div>
                     <div class="circle small"></div>
-                </div> <!-- bgLayer2 circleContainer-->
+                </div> 
                 <div class="bgImage"></div>
+                
             </div> <!--background-->
-            <div class="sectionText">
+            <div class="sectionText wrapper">
                 <h1>tina lu</h1>
                 <div class="role">
                     <h2>front-end developer</h2>
@@ -271,7 +289,7 @@
                                 </a>
                             </li>
                             <li class="listItem">
-                                <a href="#">
+                                <a href="mailto:tina.lu0107@gmail.com">
                                     <i class="fa-solid fa-envelope"></i>
                                     <p>Email</p>
                                 </a>

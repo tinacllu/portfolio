@@ -8,6 +8,9 @@
     align-items: center;
     width: 100%;
     padding: 100px 0 0;
+    @include mobile {
+        justify-content: center;
+    }
     .sectionHeader {
         display: flex;
         flex-direction: column;
@@ -19,8 +22,12 @@
         @include tablet {
             display: none;
         }
+        @include vertical {
+            display: none;
+        }
         h2 {
-            writing-mode: sideways-lr;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
             height: 50%;
             min-height: fit-content;
             justify-self: flex-end;
@@ -44,6 +51,10 @@
         align-items: center;
         width: 90%;
         padding: 50px 0px 0px 50px;
+        @include mobile {
+            // width: 100%;
+            padding: 50px 0px;
+        }
         .aboutMe {
             display: flex;
             justify-content: space-between;

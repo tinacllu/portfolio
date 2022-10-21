@@ -4,7 +4,7 @@
 
 .contact {
     .imgFlexContainer {
-        display: block;
+        // display: block;
         width: 50%;
         clip-path: circle(40%);
         @include midDesktop {
@@ -12,10 +12,9 @@
         }
     }
 
-
     display: flex;
-        justify-content: space-between;
-        align-items: center;
+    justify-content: space-between;
+    align-items: center;
     
     @include midDesktop {
         display: flex;
@@ -26,8 +25,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 80%;
+        width: 50%;
         margin: 20px;
+        @include midDesktop {
+            width: 80%;
+        }
+        @include mobile {
+            width: 95%;
+        }
     }
 
     form {
@@ -88,7 +93,7 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
-            @include mobile {
+            @include tablet {
                 flex-direction: column;
             }
         }
@@ -102,30 +107,16 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
                 p {
                     margin: 0 20px;
                 }
             }
 
-            @include mobile {
+            @include tablet {
                 padding-top: 50px;
-            }
-        }
-
-        button {
-            all:unset;
-            background-color: $lightPink;
-            color: $darkGray; 
-            padding: 10px 20px;
-            border-radius: 5px;
-            width: fit-content;
-            margin: 10px 0;
-            text-align: center;
-            transition: 0.3s;
-            
-            &:hover, &:focus {
-                background-color: $medOrange;
-                transform: scale(1.05);
             }
         }
     }
