@@ -1,3 +1,4 @@
+// remove loading screen on page load
 window.addEventListener('load', () => {
     const loadingScreen = document.querySelector(".loadingScreen");
     loadingScreen.classList.add("disappear");
@@ -7,11 +8,13 @@ window.addEventListener('load', () => {
 const navigation = document.querySelector(".navigation");
 const exit = document.querySelector("#x");
 
+// exit navigation panel when x is clicked
 exit.addEventListener("click", () => {
     navigation.classList.remove("slideIn");
     navigation.classList.add("slideOut");
 })
 
+// open navigation panel when menu button is clicked
 const menu = document.querySelector(".menu");
 
 menu.addEventListener("click", () => {
@@ -19,6 +22,19 @@ menu.addEventListener("click", () => {
     navigation.classList.remove("slideOut");
 });
 
+// close navigation if user goes to another section
+const navLinks = document.querySelectorAll(".navLinks");
+
+navLinks.forEach((navLink) => {
+    console.log(navLink);
+    navLink.addEventListener("click", () => {
+    console.log("hi")
+    navigation.classList.remove("slideIn");
+    navigation.classList.add("slideOut");
+    });
+});
+
+// form submission
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -28,3 +44,4 @@ form.addEventListener("submit", (event) => {
 })
 
 
+console.log(window.scrollY);

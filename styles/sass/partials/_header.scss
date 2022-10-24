@@ -52,6 +52,12 @@ header {
         height: 30px;
         color: white;
         text-align: center;
+        a{
+          &:hover, &:focus {
+            text-decoration: none;
+            }  
+        }
+        
     }
 
     .socialMediaContainer {
@@ -102,10 +108,12 @@ header {
         height: 200px;
         justify-content: space-between;
         align-items: center;
+        padding-right: 10px;
     }
 
     .toTop {
         all:unset;
+        margin-right: 10px;
         margin-bottom: 50px;
         justify-self: center;
         i {

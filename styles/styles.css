@@ -429,6 +429,9 @@ header {
   color: white;
   text-align: center;
 }
+.leftPanel .logo a:hover, .leftPanel .logo a:focus {
+  text-decoration: none;
+}
 .leftPanel .socialMediaContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,9 +516,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 10px;
 }
 .rightPanel .toTop {
   all: unset;
+  margin-right: 10px;
   margin-bottom: 50px;
   justify-self: center;
 }
@@ -539,8 +544,12 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
-  overflow-y: visible;
-  overflow-x: hidden;
+  overflow: clip;
+}
+@media (min-width: 1800px) {
+  .background {
+    overflow: visible;
+  }
 }
 @media (max-width: 1024px) {
   .background {
@@ -670,19 +679,6 @@ header {
   width: 100vw;
   max-width: 1800px;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .home .sectionText {
   padding: 10px 0;
