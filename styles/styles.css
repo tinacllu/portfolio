@@ -1370,6 +1370,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: hidden;
 }
 .contact form .socialMediaContainer a {
   display: -webkit-box;
@@ -1392,6 +1393,7 @@ header {
 @media (max-width: 768px) {
   .contact form .socialMediaContainer {
     padding-top: 50px;
+    visibility: visible;
   }
 }
 .contact .status {
@@ -1535,29 +1537,6 @@ footer p {
   transition: opacity 0.5s ease-in;
 }
 .reveal.active {
-  opacity: 1;
-}
-
-.fromLeft {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.fromRight {
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-}
-
-.fromLeft, .fromRight {
-  opacity: 0;
-  -webkit-transition: opacity 0.25s ease-in, -webkit-transform 0.4s ease-in;
-  transition: opacity 0.25s ease-in, -webkit-transform 0.4s ease-in;
-  transition: opacity 0.25s ease-in, transform 0.4s ease-in;
-  transition: opacity 0.25s ease-in, transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
-}
-.fromLeft.active, .fromRight.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   opacity: 1;
 }
 

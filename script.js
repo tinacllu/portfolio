@@ -4,9 +4,18 @@ window.addEventListener('load', () => {
     loadingScreen.classList.add("disappear");
 });
 
-//hamburger menu
+// *****************
+// hamburger menu
+// *****************
 const navigation = document.querySelector(".navigation");
 const exit = document.querySelector("#x");
+const menu = document.querySelector(".menu");
+const navLinks = document.querySelectorAll(".navLinks");
+// open navigation panel when menu button is clicked
+menu.addEventListener("click", () => {
+    navigation.classList.add("slideIn");
+    navigation.classList.remove("slideOut");
+});
 
 // exit navigation panel when x is clicked
 exit.addEventListener("click", () => {
@@ -14,17 +23,7 @@ exit.addEventListener("click", () => {
     navigation.classList.add("slideOut");
 })
 
-// open navigation panel when menu button is clicked
-const menu = document.querySelector(".menu");
-
-menu.addEventListener("click", () => {
-    navigation.classList.add("slideIn");
-    navigation.classList.remove("slideOut");
-});
-
 // close navigation if user goes to another section
-const navLinks = document.querySelectorAll(".navLinks");
-
 navLinks.forEach((navLink) => {
     navLink.addEventListener("click", () => {
     console.log("hi")
@@ -33,7 +32,9 @@ navLinks.forEach((navLink) => {
     });
 });
 
+// *****************
 // form submission
+// *****************
 const form = document.getElementById("contactForm");
 
 async function handleSubmit(event) {
@@ -62,14 +63,24 @@ async function handleSubmit(event) {
 
 form.addEventListener("submit", handleSubmit);
 
-
-// elements appear on scroll 
+// *****************
+// scroll animations
+// *****************
 const itemsToReveal = document.querySelectorAll(".reveal");
-
-const appearOptions = {
-    threshold: 0, 
-    rootMargin: "0px 0px -250px 0px",
-};
+const mediaQuery = window.matchMedia( "(max-width: 768px)" );
+let appearOptions = {};
+// elements appear on scroll 
+if (mediaQuery.matches) {
+    appearOptions = {
+        threshold: 0, 
+        rootMargin: "0px 0px -100px 0px",  
+    };
+} else {
+    appearOptions = {
+        threshold: 1, 
+        rootMargin: "0px 0px -50px 0px",
+    };
+}
 
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
@@ -84,11 +95,4 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 
 itemsToReveal.forEach(item => {
     appearOnScroll.observe(item);
-})
-
-// elements slide in on scroll
-const sliders = document.querySelectorAll(".slider");
-
-sliders.forEach(slider => {
-    appearOnScroll.observe(slider);
-})
+});
