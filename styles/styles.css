@@ -364,6 +364,14 @@ header {
   z-index: 9;
 }
 
+.skip {
+  height: 0;
+  width: 0;
+  position: absolute;
+  color: transparent;
+  z-index: -99;
+}
+
 .menu {
   display: none;
   position: absolute;
@@ -609,7 +617,7 @@ header {
   height: 800px;
   border-radius: 50%;
   background-size: cover;
-  background-position: -200px -100px;
+  background-position: -100px;
   z-index: -9;
 }
 @media (min-width: 1800px) {
@@ -1194,6 +1202,9 @@ header {
             align-items: center;
   }
 }
+.contact p {
+  padding-bottom: 10px;
+}
 .contact .imgFlexContainer {
   width: 50%;
   -webkit-clip-path: circle(40%);
@@ -1368,6 +1379,13 @@ header {
   .contact form .socialMediaContainer {
     padding-top: 50px;
   }
+}
+.contact .status {
+  padding: 40px 0;
+  border-radius: 5%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
 }
 
 footer {

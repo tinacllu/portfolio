@@ -9,8 +9,6 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    // overflow-y: visible;
-    // overflow-x: hidden;
     overflow: clip;
     @include largeDesktop {
         overflow: visible;
@@ -57,7 +55,7 @@
         height: 800px;
         border-radius: 50%;
         background-size: cover;
-        background-position: -200px -100px;
+        background-position: -100px;
         z-index: -9;
         @include largeDesktop {
             transform: scale(1.5);

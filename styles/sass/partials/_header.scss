@@ -6,6 +6,14 @@ header {
     z-index: 9;
 }
 
+.skip {
+    height: 0;
+    width: 0;
+    position: absolute;
+    color: transparent;
+    z-index: -99;
+}
+
 .menu {
     display: none;
     position: absolute;
