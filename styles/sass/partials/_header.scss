@@ -16,11 +16,16 @@ header {
 
 .menu {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     padding: 20px;
+    opacity: 50%;
+    transition: 0.5s;
     @include mobile {
         display: block;
+    }
+    &:focus, &:hover {
+        opacity: 100%;
     }
 }
 
@@ -47,6 +52,9 @@ header {
     flex-direction: column;
     justify-content: space-between;
     margin: 20px 0 0;
+    @include largeDesktop {
+        left: calc((100vw - 1800px) / 2 - 5%)
+    }
     @include mobile {
         display: none;
     }

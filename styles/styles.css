@@ -275,7 +275,6 @@ section {
 }
 
 body {
-  max-width: 1800px;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -374,14 +373,20 @@ header {
 
 .menu {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 9;
   padding: 20px;
+  opacity: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 480px) {
   .menu {
     display: block;
   }
+}
+.menu:focus, .menu:hover {
+  opacity: 100%;
 }
 
 .navigation {
@@ -420,6 +425,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 0 0;
+}
+@media (min-width: 1800px) {
+  .leftPanel {
+    left: calc((100vw - 1800px) / 2 - 5%);
+  }
 }
 @media (max-width: 480px) {
   .leftPanel {
@@ -1513,6 +1523,38 @@ footer p {
 .otherRoles li:nth-of-type(4) {
   -webkit-animation: fadein 8s ease-in-out 8s infinite alternate;
           animation: fadein 8s ease-in-out 8s infinite alternate;
+}
+
+.reveal {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+.reveal.active {
+  opacity: 1;
+}
+
+.fromLeft {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.fromRight {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.fromLeft, .fromRight {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in, -webkit-transform 0.4s ease-in;
+  transition: opacity 0.25s ease-in, -webkit-transform 0.4s ease-in;
+  transition: opacity 0.25s ease-in, transform 0.4s ease-in;
+  transition: opacity 0.25s ease-in, transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+}
+.fromLeft.active, .fromRight.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .loadingScreen {

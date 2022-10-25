@@ -63,4 +63,32 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 
-console.log(window.scrollY);
+// elements appear on scroll 
+const itemsToReveal = document.querySelectorAll(".reveal");
+
+const appearOptions = {
+    threshold: 0, 
+    rootMargin: "0px 0px -250px 0px",
+};
+
+const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add("active");
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+}, appearOptions);
+
+itemsToReveal.forEach(item => {
+    appearOnScroll.observe(item);
+})
+
+// elements slide in on scroll
+const sliders = document.querySelectorAll(".slider");
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+})
