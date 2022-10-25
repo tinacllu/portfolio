@@ -318,7 +318,7 @@ input, textarea {
   margin: 10px 0;
 }
 
-button {
+button, .resume {
   all: unset;
   background-color: #ffe9e1;
   color: #151515;
@@ -332,7 +332,7 @@ button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-button:hover, button:focus {
+button:hover, button:focus, .resume:hover, .resume:focus {
   background-color: #fdaa7e;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -409,6 +409,10 @@ header {
 .navigation li {
   padding: 10px 0;
 }
+.navigation .resume:hover, .navigation .resume:focus {
+  text-decoration: none;
+  color: #151515;
+}
 
 .leftPanel {
   min-height: 100vh;
@@ -428,7 +432,7 @@ header {
 }
 @media (min-width: 1800px) {
   .leftPanel {
-    left: calc((100vw - 1800px) / 2 - 5%);
+    right: calc(1800px + (100vw - 1800px) / 2 - 5%);
   }
 }
 @media (max-width: 480px) {
@@ -447,7 +451,7 @@ header {
   color: white;
   text-align: center;
 }
-.leftPanel .logo a:hover, .leftPanel .logo a:focus {
+.leftPanel .logo:hover, .leftPanel .logo:focus {
   text-decoration: none;
 }
 .leftPanel .socialMediaContainer {
