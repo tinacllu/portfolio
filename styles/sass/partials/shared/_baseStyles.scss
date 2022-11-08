@@ -65,7 +65,7 @@ button, .resume {
     margin: 10px 0;
     text-align: center;
     transition: 0.3s;
-    
+    cursor: pointer;
     &:hover, &:focus {
         background-color: $medOrange;
         transform: scale(1.05);

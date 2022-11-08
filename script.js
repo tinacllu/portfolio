@@ -77,8 +77,8 @@ if (mediaQuery.matches) {
     };
 } else {
     appearOptions = {
-        threshold: 0.75, 
-        rootMargin: "0px 0px -50px 0px",
+        threshold: 0.25, 
+        rootMargin: "0px 0px -25px 0px",
     };
 }
 

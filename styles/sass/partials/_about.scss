@@ -78,6 +78,10 @@
                 }
                 img {
                     filter: grayscale(100%);
+                    transition: 0.5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
                 }
             }
 

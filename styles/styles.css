@@ -331,6 +331,7 @@ button, .resume {
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 button:hover, button:focus, .resume:hover, .resume:focus {
   background-color: #fdaa7e;
@@ -943,6 +944,12 @@ header {
 .about .sectionContent .aboutMe .imgFlexContainer img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.about .sectionContent .aboutMe .imgFlexContainer img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 .about .sectionContent .aboutMe .textContainer {
   width: 60%;
@@ -1176,7 +1183,7 @@ header {
 .projects .projectContainer .project .textContainer .links {
   letter-spacing: 10px;
 }
-.projects .projectContainer li:nth-child(2) {
+.projects .projectContainer li:nth-child(2n) {
   background-color: white;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1184,7 +1191,7 @@ header {
           flex-direction: row-reverse;
 }
 @media (max-width: 768px) {
-  .projects .projectContainer li:nth-child(2) {
+  .projects .projectContainer li:nth-child(2n) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
