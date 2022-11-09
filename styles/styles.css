@@ -377,7 +377,6 @@ header {
   position: fixed;
   z-index: 9;
   padding: 20px;
-  opacity: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
